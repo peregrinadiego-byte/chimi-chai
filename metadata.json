@@ -1,0 +1,6 @@
+{
+  "name": "EZ-APU Studio",
+  "description": "Plataforma profesional de Presupuestos de Obra, Análisis de Precios Unitarios (APU), Catálogo de Insumos interactivo y Control de Costos de Construcción.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
