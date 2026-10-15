@@ -32,12 +32,12 @@ export const ProjectManagerModal: React.FC<ProjectManagerModalProps> = ({
   // Without this, the form retained the values from the project that was
   // active when the modal was first mounted.
   useEffect(() => {
-    setName(currentProject.name);
-    setCode(currentProject.code);
-    setClient(currentProject.client);
-    setLocation(currentProject.location);
-    setCurrency(currentProject.currency || 'MXN');
-  }, [currentProject]);
+  setName(currentProject.name);
+  setCode(currentProject.code);
+  setClient(currentProject.client);
+  setLocation(currentProject.location);
+  setCurrency(currentProject.currency || 'MXN');
+}, [currentProject.id]);
 
   if (!isOpen) return null;
 
