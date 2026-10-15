@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/EZ-APU/',
+    base: '/chimi-chai/',
 
     plugins: [react(), tailwindcss()],
     resolve: {
