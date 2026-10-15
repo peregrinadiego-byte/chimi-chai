@@ -1,13 +1,14 @@
 {
-  
-"version": "0.0.0",
-"main": "desktop/main.cjs",
-"type": "module",
-"description": "Herramienta web y de escritorio para presupuestos y control de obra EZ-APU",
-"author": {
-  "name": "EZ-APU",
-  "email": "peregrinadiego-byte@users.noreply.github.com"
-},
+  "name": "react-example",
+  "private": true,
+  "version": "0.0.0",
+  "main": "desktop/main.cjs",
+  "type": "module",
+  "description": "Herramienta web y de escritorio para presupuestos y control de obra EZ-APU",
+  "author": {
+    "name": "EZ-APU",
+    "email": "peregrinadiego-byte@users.noreply.github.com"
+  },
 "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
