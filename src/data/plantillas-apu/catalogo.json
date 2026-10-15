@@ -1,0 +1,1343 @@
+{
+  "01.- VIVIENDA DE INTERÉS SOCIAL": {
+    "concepts": 103,
+    "chapters": [
+      [
+        "201",
+        "Preliminares"
+      ],
+      [
+        "202",
+        "Cimentación"
+      ],
+      [
+        "203",
+        "Estructura"
+      ],
+      [
+        "204",
+        "Albañilería"
+      ],
+      [
+        "205",
+        "Puertas y ventanas"
+      ],
+      [
+        "206",
+        "Pisos y azulejos"
+      ],
+      [
+        "207",
+        "Pintura y pastas"
+      ],
+      [
+        "208",
+        "Muebles de baño"
+      ],
+      [
+        "209",
+        "Inst. Hidrosanitaria"
+      ],
+      [
+        "210",
+        "Inst. Eléctrica"
+      ],
+      [
+        "211",
+        "Inst. Gas"
+      ],
+      [
+        "212",
+        "Jardinería"
+      ],
+      [
+        "213",
+        "Limpieza"
+      ]
+    ]
+  },
+  "02.- VIVIENDA DE INTERÉS MEDIO": {
+    "concepts": 182,
+    "chapters": [
+      [
+        "301",
+        "Preliminares"
+      ],
+      [
+        "302",
+        "Cimentación"
+      ],
+      [
+        "303",
+        "Estructura"
+      ],
+      [
+        "304",
+        "Albañilería"
+      ],
+      [
+        "305",
+        "Acabados"
+      ],
+      [
+        "306",
+        "Herrería"
+      ],
+      [
+        "307",
+        "Aluminio"
+      ],
+      [
+        "308",
+        "Carpintería"
+      ],
+      [
+        "309",
+        "Muebles de baño"
+      ],
+      [
+        "310",
+        "Inst. Hidrosanitaria"
+      ],
+      [
+        "311",
+        "Inst. Eléctrica"
+      ],
+      [
+        "312",
+        "Inst. de Gas"
+      ],
+      [
+        "313",
+        "Jardinería"
+      ],
+      [
+        "314",
+        "Limpieza"
+      ],
+      [
+        "315",
+        "Cocina Integral"
+      ]
+    ]
+  },
+  "03.- VIVIENDA RESIDENCIAL": {
+    "concepts": 229,
+    "chapters": [
+      [
+        "401",
+        "Preliminares"
+      ],
+      [
+        "402",
+        "Cimentación"
+      ],
+      [
+        "403",
+        "Estructura"
+      ],
+      [
+        "404",
+        "Albañilería"
+      ],
+      [
+        "405",
+        "Cubierta de madera"
+      ],
+      [
+        "406",
+        "Acabados"
+      ],
+      [
+        "407",
+        "Herrería"
+      ],
+      [
+        "408",
+        "Cancelería y cristal"
+      ],
+      [
+        "409",
+        "Carpintería"
+      ],
+      [
+        "410",
+        "Muebles de baño"
+      ],
+      [
+        "411",
+        "Instalación Hidrosanitaria"
+      ],
+      [
+        "412",
+        "Instalación Eléctrica"
+      ],
+      [
+        "413",
+        "Luminarias"
+      ],
+      [
+        "414",
+        "Instalación de gas"
+      ],
+      [
+        "415",
+        "Aire acondicionado"
+      ],
+      [
+        "416",
+        "Jardinería"
+      ],
+      [
+        "417",
+        "Limpieza"
+      ],
+      [
+        "418",
+        "Cocina Integral"
+      ]
+    ]
+  },
+  "04.- ESTACIONAMIENTO": {
+    "concepts": 195,
+    "chapters": [
+      [
+        "801",
+        "Preliminares"
+      ],
+      [
+        "802",
+        "Pilas"
+      ],
+      [
+        "803",
+        "Excavación y relleno de semisótano"
+      ],
+      [
+        "804",
+        "Cimentación"
+      ],
+      [
+        "805",
+        "Estructura de concreto"
+      ],
+      [
+        "806",
+        "Albañilería"
+      ],
+      [
+        "807",
+        "Acabados"
+      ],
+      [
+        "808",
+        "Herrería"
+      ],
+      [
+        "809",
+        "Inst. Hidrosanitaria"
+      ],
+      [
+        "810",
+        "Inst. Eléctrica"
+      ],
+      [
+        "811",
+        "Luminarias"
+      ],
+      [
+        "812",
+        "Protección contra incendio"
+      ],
+      [
+        "813",
+        "Limpieza"
+      ],
+      [
+        "814",
+        "Elevador"
+      ],
+      [
+        "815",
+        "Pararrayos"
+      ]
+    ]
+  },
+  "05.- GIMNASIO": {
+    "concepts": 226,
+    "chapters": [
+      [
+        "701",
+        "Preliminares"
+      ],
+      [
+        "702",
+        "Terracerías"
+      ],
+      [
+        "703",
+        "Cimentación y piso de concreto"
+      ],
+      [
+        "704",
+        "Estructura de concreto y gradas"
+      ],
+      [
+        "705",
+        "Estructura metálica y cubierta"
+      ],
+      [
+        "706",
+        "Albañilería, muros, cadenas y castillos"
+      ],
+      [
+        "707",
+        "Recubrimientos"
+      ],
+      [
+        "708",
+        "Piso de duela de madera"
+      ],
+      [
+        "709",
+        "Herrería"
+      ],
+      [
+        "710",
+        "Cancelería"
+      ],
+      [
+        "711",
+        "Carpintería"
+      ],
+      [
+        "712",
+        "Muebles de baño y mamparas"
+      ],
+      [
+        "713",
+        "Instalación Hidrosanitaria"
+      ],
+      [
+        "714",
+        "Instalación Eléctrica"
+      ],
+      [
+        "715",
+        "Protección contra incendio"
+      ],
+      [
+        "716",
+        "Equipamiento deportivo"
+      ],
+      [
+        "717",
+        "Pararrayos"
+      ]
+    ]
+  },
+  "06.- EDIFICIO DE 20 DEPARTAMENTOS NIVEL ECONÓMICO": {
+    "concepts": 161,
+    "chapters": [
+      [
+        "501",
+        "Preliminares"
+      ],
+      [
+        "502",
+        "Excavaciones"
+      ],
+      [
+        "503",
+        "Cimentación (losa fondo, muros y tapa)"
+      ],
+      [
+        "504",
+        "Estructura P.B. (estacionamiento)"
+      ],
+      [
+        "505",
+        "Estructura planta tipo (5 niveles)"
+      ],
+      [
+        "506",
+        "Albañilería"
+      ],
+      [
+        "507",
+        "Azotea"
+      ],
+      [
+        "508",
+        "Acabados"
+      ],
+      [
+        "509",
+        "Herrería"
+      ],
+      [
+        "510",
+        "Cancelería"
+      ],
+      [
+        "511",
+        "Carpintería"
+      ],
+      [
+        "512",
+        "Muebles de baño"
+      ],
+      [
+        "513",
+        "Instalación Hidrosanitaria"
+      ],
+      [
+        "514",
+        "Instalación Eléctrica"
+      ],
+      [
+        "515",
+        "Instalación de Gas"
+      ],
+      [
+        "516",
+        "Jardinería"
+      ],
+      [
+        "517",
+        "Cocina integral"
+      ],
+      [
+        "518",
+        "Limpieza"
+      ],
+      [
+        "519",
+        "Seguridad en obra"
+      ]
+    ]
+  },
+  "07.- EDIFICIO DE 20 DEPARTAMENTOS NIVEL MEDIO": {
+    "concepts": 561,
+    "nested": true,
+    "chapters": [
+      [
+        "601",
+        "Preliminares"
+      ],
+      [
+        "602",
+        "Excavaciones"
+      ],
+      [
+        "603",
+        "Cimentación"
+      ],
+      [
+        "604",
+        "Semisótano (Estacionamiento)"
+      ],
+      [
+        "605",
+        "Estructura de concreto"
+      ],
+      [
+        "606",
+        "Albañilería"
+      ],
+      [
+        "607",
+        "Acabados"
+      ],
+      [
+        "608",
+        "Herrería"
+      ],
+      [
+        "609",
+        "Cancelería"
+      ],
+      [
+        "610",
+        "Carpintería"
+      ],
+      [
+        "611",
+        "Muebles de baño"
+      ],
+      [
+        "612",
+        "Inst. Hidrosanitaria"
+      ],
+      [
+        "613",
+        "Instalación Eléctrica"
+      ],
+      [
+        "614",
+        "Instalación de Gas"
+      ],
+      [
+        "615",
+        "Jardinería"
+      ],
+      [
+        "616",
+        "Limpieza"
+      ],
+      [
+        "617",
+        "Elevador y equipos"
+      ],
+      [
+        "618",
+        "Cocina integral"
+      ],
+      [
+        "619",
+        "Seguridad en obra"
+      ]
+    ]
+  },
+  "08.- CENTRO COMERCIAL": {
+    "concepts": 1946,
+    "chapters": [
+      [
+        "A1",
+        "Preliminares"
+      ],
+      [
+        "A2",
+        "Cimentación"
+      ],
+      [
+        "A3",
+        "Estructura de concreto"
+      ],
+      [
+        "A4",
+        "Estructura metálica"
+      ],
+      [
+        "A5",
+        "Pisos"
+      ],
+      [
+        "A6",
+        "Albañilería"
+      ],
+      [
+        "A7",
+        "Cubierta de lámina"
+      ],
+      [
+        "A8",
+        "Muros de panel y plafones"
+      ],
+      [
+        "A9",
+        "Acabados"
+      ],
+      [
+        "A10",
+        "Herrería"
+      ],
+      [
+        "A11",
+        "Aluminio"
+      ],
+      [
+        "A12",
+        "Domos"
+      ],
+      [
+        "A13",
+        "Carpintería"
+      ],
+      [
+        "A14",
+        "Puertas y ventanas"
+      ],
+      [
+        "A15",
+        "Muebles de baño"
+      ],
+      [
+        "A16",
+        "Instalación hidrosanitaria"
+      ],
+      [
+        "A17",
+        "Instalación eléctrica"
+      ],
+      [
+        "A18",
+        "Canalizaciones"
+      ],
+      [
+        "A19",
+        "Vacío"
+      ],
+      [
+        "A20",
+        "Aire acondicionado"
+      ],
+      [
+        "A21",
+        "Red contra incendio"
+      ],
+      [
+        "A22",
+        "Vacío"
+      ],
+      [
+        "A23",
+        "Inst. de gas"
+      ],
+      [
+        "A24",
+        "Limpiezas"
+      ],
+      [
+        "A25",
+        "Demoliciones"
+      ],
+      [
+        "A26",
+        "Terracerías"
+      ],
+      [
+        "A27",
+        "Pavimentos"
+      ],
+      [
+        "A28",
+        "Cisterna"
+      ],
+      [
+        "A29",
+        "Drenaje"
+      ],
+      [
+        "A30",
+        "Inst. hidráulica exterior"
+      ],
+      [
+        "A31",
+        "Inst. eléctrica exterior"
+      ],
+      [
+        "A32",
+        "Albañilería exterior"
+      ],
+      [
+        "A33",
+        "Señalización y equipamiento"
+      ],
+      [
+        "A34",
+        "Jardinería"
+      ]
+    ]
+  },
+  "09.- NAVE INDUSTRIAL": {
+    "concepts": 76,
+    "chapters": [
+      [
+        "901",
+        "Preliminares"
+      ],
+      [
+        "902",
+        "Terracerías"
+      ],
+      [
+        "903",
+        "Cimentación"
+      ],
+      [
+        "904",
+        "Estructura metálica"
+      ],
+      [
+        "905",
+        "Cubiertas y láminas"
+      ],
+      [
+        "906",
+        "Albañilería"
+      ],
+      [
+        "907",
+        "Herrería"
+      ],
+      [
+        "908",
+        "Bajadas y drenaje"
+      ],
+      [
+        "909",
+        "Instalación eléctrica"
+      ],
+      [
+        "910",
+        "Pararrayos"
+      ],
+      [
+        "911",
+        "Limpieza"
+      ]
+    ]
+  },
+  "10.- EDIFICIO ESTACIONAMIENTO": {
+    "concepts": 195,
+    "chapters": [
+      [
+        "801",
+        "Preliminares"
+      ],
+      [
+        "802",
+        "Pilas"
+      ],
+      [
+        "803",
+        "Excavación y relleno de semisótano"
+      ],
+      [
+        "804",
+        "Cimentación"
+      ],
+      [
+        "805",
+        "Estructura de concreto"
+      ],
+      [
+        "806",
+        "Albañilería"
+      ],
+      [
+        "807",
+        "Acabados"
+      ],
+      [
+        "808",
+        "Herrería"
+      ],
+      [
+        "809",
+        "Inst. Hidrosanitaria"
+      ],
+      [
+        "810",
+        "Inst. Eléctrica"
+      ],
+      [
+        "811",
+        "Luminarias"
+      ],
+      [
+        "812",
+        "Protección contra incendio"
+      ],
+      [
+        "813",
+        "Limpieza"
+      ],
+      [
+        "814",
+        "Elevador"
+      ],
+      [
+        "815",
+        "Pararrayos"
+      ]
+    ]
+  },
+  "11.- CARRETERAS": {
+    "concepts": 133,
+    "nested": true,
+    "chapters": [
+      [
+        "009",
+        "Terracerías"
+      ],
+      [
+        "086",
+        "Pavimentos"
+      ]
+    ]
+  },
+  "12.- CONSTRUCTOR": {
+    "concepts": 13948,
+    "master": true,
+    "nested": true,
+    "chapters": [
+      [
+        "103",
+        "Preliminares"
+      ],
+      [
+        "104",
+        "Cimentación"
+      ],
+      [
+        "105",
+        "Estructura"
+      ],
+      [
+        "106",
+        "Albañilería"
+      ],
+      [
+        "107",
+        "Muros y plafones"
+      ],
+      [
+        "108",
+        "Acabados"
+      ],
+      [
+        "109",
+        "Pisos y azulejos"
+      ],
+      [
+        "110",
+        "Herrería"
+      ],
+      [
+        "111",
+        "Cancelería"
+      ],
+      [
+        "112",
+        "Cristales y domos"
+      ],
+      [
+        "113",
+        "Carpintería"
+      ],
+      [
+        "114",
+        "Muebles de baño"
+      ],
+      [
+        "115",
+        "Cocinas, electrónica y línea blanca"
+      ],
+      [
+        "116",
+        "Señalización"
+      ],
+      [
+        "118",
+        "Jardinería"
+      ],
+      [
+        "119",
+        "Limpiezas"
+      ],
+      [
+        "121",
+        "Instalación hidrosanitaria"
+      ],
+      [
+        "122",
+        "Instalación eléctrica"
+      ],
+      [
+        "123",
+        "Sistema de tierras y pararrayos"
+      ],
+      [
+        "124",
+        "Luminarias y accesorios"
+      ],
+      [
+        "125",
+        "Aire acondicionado"
+      ],
+      [
+        "126",
+        "Detección de humos"
+      ],
+      [
+        "127",
+        "Protección contra incendio"
+      ],
+      [
+        "128",
+        "Instalaciones especiales HID"
+      ],
+      [
+        "129",
+        "Instalación de gas"
+      ],
+      [
+        "134",
+        "Soportería"
+      ],
+      [
+        "136",
+        "Equipamiento"
+      ],
+      [
+        "140",
+        "Desmonte"
+      ],
+      [
+        "141",
+        "Terracerías"
+      ],
+      [
+        "142",
+        "Pavimentos y banquetas"
+      ],
+      [
+        "143",
+        "Drenaje"
+      ],
+      [
+        "144",
+        "Agua potable"
+      ],
+      [
+        "145",
+        "Electrificación"
+      ],
+      [
+        "147",
+        "Señalización"
+      ]
+    ]
+  },
+  "13.- CONCURSOS": {
+    "concepts": 14451,
+    "master": true,
+    "nested": true,
+    "chapters": [
+      [
+        "103",
+        "Preliminares"
+      ],
+      [
+        "104",
+        "Cimentación"
+      ],
+      [
+        "105",
+        "Estructura"
+      ],
+      [
+        "106",
+        "Albañilería"
+      ],
+      [
+        "107",
+        "Muros y plafones"
+      ],
+      [
+        "108",
+        "Acabados"
+      ],
+      [
+        "109",
+        "Pisos y azulejos"
+      ],
+      [
+        "110",
+        "Herrería"
+      ],
+      [
+        "111",
+        "Cancelería"
+      ],
+      [
+        "112",
+        "Cristales y domos"
+      ],
+      [
+        "113",
+        "Carpintería"
+      ],
+      [
+        "114",
+        "Muebles de baño"
+      ],
+      [
+        "115",
+        "Cocinas, electrónica y línea blanca"
+      ],
+      [
+        "116",
+        "Señalización"
+      ],
+      [
+        "118",
+        "Jardinería"
+      ],
+      [
+        "119",
+        "Limpiezas"
+      ],
+      [
+        "121",
+        "Instalación hidrosanitaria"
+      ],
+      [
+        "122",
+        "Instalación eléctrica"
+      ],
+      [
+        "123",
+        "Sistema de tierras y pararrayos"
+      ],
+      [
+        "124",
+        "Luminarias y accesorios"
+      ],
+      [
+        "125",
+        "Aire acondicionado"
+      ],
+      [
+        "126",
+        "Detección de humos"
+      ],
+      [
+        "127",
+        "Protección contra incendio"
+      ],
+      [
+        "128",
+        "Instalaciones especiales HID"
+      ],
+      [
+        "129",
+        "Instalación de gas"
+      ],
+      [
+        "134",
+        "Soportería"
+      ],
+      [
+        "136",
+        "Equipamiento"
+      ],
+      [
+        "140",
+        "Desmonte"
+      ],
+      [
+        "141",
+        "Terracerías"
+      ],
+      [
+        "142",
+        "Pavimentos y banquetas"
+      ],
+      [
+        "143",
+        "Drenaje"
+      ],
+      [
+        "144",
+        "Agua potable"
+      ],
+      [
+        "145",
+        "Electrificación"
+      ],
+      [
+        "147",
+        "Señalización"
+      ]
+    ]
+  },
+  "14.- DESARROLLADOR": {
+    "concepts": 14470,
+    "master": true,
+    "nested": true,
+    "chapters": [
+      [
+        "103",
+        "Preliminares"
+      ],
+      [
+        "104",
+        "Cimentación"
+      ],
+      [
+        "105",
+        "Estructura"
+      ],
+      [
+        "106",
+        "Albañilería"
+      ],
+      [
+        "107",
+        "Muros y plafones"
+      ],
+      [
+        "108",
+        "Acabados"
+      ],
+      [
+        "109",
+        "Pisos y azulejos"
+      ],
+      [
+        "110",
+        "Herrería"
+      ],
+      [
+        "111",
+        "Cancelería"
+      ],
+      [
+        "112",
+        "Cristales y domos"
+      ],
+      [
+        "113",
+        "Carpintería"
+      ],
+      [
+        "114",
+        "Muebles de baño"
+      ],
+      [
+        "115",
+        "Cocinas, electrónica y línea blanca"
+      ],
+      [
+        "116",
+        "Señalización"
+      ],
+      [
+        "118",
+        "Jardinería"
+      ],
+      [
+        "119",
+        "Limpiezas"
+      ],
+      [
+        "121",
+        "Instalación hidrosanitaria"
+      ],
+      [
+        "122",
+        "Instalación eléctrica"
+      ],
+      [
+        "123",
+        "Sistema de tierras y pararrayos"
+      ],
+      [
+        "124",
+        "Luminarias y accesorios"
+      ],
+      [
+        "125",
+        "Aire acondicionado"
+      ],
+      [
+        "126",
+        "Detección de humos"
+      ],
+      [
+        "127",
+        "Protección contra incendio"
+      ],
+      [
+        "128",
+        "Instalaciones especiales HID"
+      ],
+      [
+        "129",
+        "Instalación de gas"
+      ],
+      [
+        "134",
+        "Soportería"
+      ],
+      [
+        "136",
+        "Equipamiento"
+      ],
+      [
+        "140",
+        "Desmonte"
+      ],
+      [
+        "141",
+        "Terracerías"
+      ],
+      [
+        "142",
+        "Pavimentos y banquetas"
+      ],
+      [
+        "143",
+        "Drenaje"
+      ],
+      [
+        "144",
+        "Agua potable"
+      ],
+      [
+        "145",
+        "Electrificación"
+      ],
+      [
+        "147",
+        "Señalización"
+      ]
+    ]
+  },
+  "15.- REMODELADOR": {
+    "concepts": 13935,
+    "master": true,
+    "nested": true,
+    "chapters": [
+      [
+        "103",
+        "Preliminares"
+      ],
+      [
+        "104",
+        "Cimentación"
+      ],
+      [
+        "105",
+        "Estructura"
+      ],
+      [
+        "106",
+        "Albañilería"
+      ],
+      [
+        "107",
+        "Muros y plafones"
+      ],
+      [
+        "108",
+        "Acabados"
+      ],
+      [
+        "109",
+        "Pisos y azulejos"
+      ],
+      [
+        "110",
+        "Herrería"
+      ],
+      [
+        "111",
+        "Cancelería"
+      ],
+      [
+        "112",
+        "Cristales y domos"
+      ],
+      [
+        "113",
+        "Carpintería"
+      ],
+      [
+        "114",
+        "Muebles de baño"
+      ],
+      [
+        "115",
+        "Cocinas, electrónica y línea blanca"
+      ],
+      [
+        "116",
+        "Señalización"
+      ],
+      [
+        "118",
+        "Jardinería"
+      ],
+      [
+        "119",
+        "Limpiezas"
+      ],
+      [
+        "121",
+        "Instalación hidrosanitaria"
+      ],
+      [
+        "122",
+        "Instalación eléctrica"
+      ],
+      [
+        "123",
+        "Sistema de tierras y pararrayos"
+      ],
+      [
+        "124",
+        "Luminarias y accesorios"
+      ],
+      [
+        "125",
+        "Aire acondicionado"
+      ],
+      [
+        "126",
+        "Detección de humos"
+      ],
+      [
+        "127",
+        "Protección contra incendio"
+      ],
+      [
+        "128",
+        "Instalaciones especiales HID"
+      ],
+      [
+        "129",
+        "Instalación de gas"
+      ],
+      [
+        "134",
+        "Soportería"
+      ],
+      [
+        "136",
+        "Equipamiento"
+      ],
+      [
+        "140",
+        "Desmonte"
+      ],
+      [
+        "141",
+        "Terracerías"
+      ],
+      [
+        "142",
+        "Pavimentos y banquetas"
+      ],
+      [
+        "143",
+        "Drenaje"
+      ],
+      [
+        "144",
+        "Agua potable"
+      ],
+      [
+        "145",
+        "Electrificación"
+      ],
+      [
+        "147",
+        "Señalización"
+      ]
+    ]
+  }
+}

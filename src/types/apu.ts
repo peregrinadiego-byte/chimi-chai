@@ -108,10 +108,27 @@ export interface Project {
   concepts: Record<string, MatrixConcept>;
   /** Optional M2 schedule data; kept optional for backward-compatible imports. */
   schedule?: ScheduleTask[];
+  scheduleStartDate?: string;
+  scheduleCalendarMode?: 'natural' | 'working';
   estimates?: Estimate[];
   supplies?: SupplyOrder[];
   warehouseMovements?: WarehouseMovement[];
+  /** Datos de la encomienda y honorarios que originaron la obra. */
+  professionalFees?: ProfessionalFees;
   lastModified: string;
+}
+
+export interface ProfessionalFees {
+  professionalName?: string;
+  professionalLicense?: string;
+  serviceType: 'arquitectura' | 'urbanismo' | 'dro';
+  genreName: string;
+  surfaceArea: number;
+  baseConstructionCost: number;
+  regionalFactor: number;
+  honorarium: number;
+  scopePercent: number;
+  createdAt: string;
 }
 
 export interface EstimateItem {

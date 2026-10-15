@@ -1,0 +1,97 @@
+{
+  "category": "12.- CONSTRUCTOR",
+  "slug": "constructor",
+  "chapters": {
+    "121": {
+      "file": "matrices/121.json",
+      "count": 2662,
+      "bytes": 4127650
+    },
+    "122": {
+      "file": "matrices/122.json",
+      "count": 2601,
+      "bytes": 3655049
+    },
+    "123": {
+      "file": "matrices/123.json",
+      "count": 320,
+      "bytes": 424370
+    },
+    "124": {
+      "file": "matrices/124.json",
+      "count": 96,
+      "bytes": 127047
+    },
+    "125": {
+      "file": "matrices/125.json",
+      "count": 1460,
+      "bytes": 2229565
+    },
+    "126": {
+      "file": "matrices/126.json",
+      "count": 29,
+      "bytes": 43797
+    },
+    "127": {
+      "file": "matrices/127.json",
+      "count": 514,
+      "bytes": 708625
+    },
+    "128": {
+      "file": "matrices/128.json",
+      "count": 180,
+      "bytes": 223092
+    },
+    "129": {
+      "file": "matrices/129.json",
+      "count": 63,
+      "bytes": 84619
+    },
+    "134": {
+      "file": "matrices/134.json",
+      "count": 166,
+      "bytes": 268702
+    },
+    "136": {
+      "file": "matrices/136.json",
+      "count": 6,
+      "bytes": 7193
+    },
+    "140": {
+      "file": "matrices/140.json",
+      "count": 6,
+      "bytes": 5273
+    },
+    "141": {
+      "file": "matrices/141.json",
+      "count": 25,
+      "bytes": 26795
+    },
+    "142": {
+      "file": "matrices/142.json",
+      "count": 43,
+      "bytes": 62862
+    },
+    "143": {
+      "file": "matrices/143.json",
+      "count": 112,
+      "bytes": 162744
+    },
+    "144": {
+      "file": "matrices/144.json",
+      "count": 449,
+      "bytes": 647251
+    },
+    "145": {
+      "file": "matrices/145.json",
+      "count": 3,
+      "bytes": 5443
+    },
+    "147": {
+      "file": "matrices/147.json",
+      "count": 5,
+      "bytes": 8616
+    }
+  },
+  "unmapped": null
+}

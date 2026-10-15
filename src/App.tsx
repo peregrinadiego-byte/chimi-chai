@@ -14,14 +14,17 @@ import { APUInspector } from './components/APUInspector';
 import { MarkupModal } from './components/MarkupModal';
 import { ResourceExplosionModal } from './components/ResourceExplosionModal';
 import { ProjectManagerModal } from './components/ProjectManagerModal';
-import { FSRConfig, MarkupConfig, MatrixConcept, MatrixItem, Project, Resource, WBSNode } from './types/apu';
+import { FSRConfig, MarkupConfig, MatrixConcept, MatrixItem, Project, Resource, WBSNode, ScheduleTask } from './types/apu';
 import { INITIAL_PROJECT, MASTER_RESOURCES } from './data/seedData';
 import { recalculateProject } from './utils/calculations';
 import { exportBudgetToCSV, exportBudgetToExcelHTML, exportEstimatesToCSV, exportOperationsToCSV, exportScheduleToCSV } from './utils/exportUtils';
-import { ScheduleView } from './components/ScheduleView';
+import { ScheduleCPMView } from './components/ScheduleCPMView';
 import { EstimatesView } from './components/EstimatesView';
 import { OperationsView } from './components/OperationsView';
 import { EarnedValueView } from './components/EarnedValueView';
+import { ResourcesView } from './components/ResourcesView';
+import { HonorariosView } from './components/HonorariosView';
+import { TemplateSelectorModal } from './components/TemplateSelectorModal';
 
 export default function App() {
   // Load Project from localStorage or default seed
@@ -59,6 +62,7 @@ export default function App() {
   // Modals state
   const [showMarkupModal, setShowMarkupModal] = useState(false);
   const [showProjectsModal, setShowProjectsModal] = useState(false);
+  const [showTemplatesModal, setShowTemplatesModal] = useState(false);
 
   // Memoized map of resources for fast lookups
   const resourcesMap = useMemo(() => {
@@ -90,6 +94,28 @@ export default function App() {
     setProject(freshlyCalculated);
   }, []);
 
+  // ScheduleCPMView emits normalized activities without coupling the view to the app state.
+  useEffect(() => {
+    const handleScheduleUpdate = (event: Event) => {
+      const detail = (event as CustomEvent<{ schedule: ScheduleTask[]; startDate?: string; calendarMode?: 'natural' | 'working' }>).detail;
+      const schedule = Array.isArray(detail) ? detail : detail?.schedule;
+      if (!Array.isArray(schedule)) return;
+      setProject((current) => {
+        const updated = {
+          ...current,
+          schedule,
+          scheduleStartDate: Array.isArray(detail) ? current.scheduleStartDate : detail.startDate,
+          scheduleCalendarMode: Array.isArray(detail) ? current.scheduleCalendarMode : detail.calendarMode,
+          lastModified: new Date().toISOString(),
+        };
+        localStorage.setItem('ezapu_active_project', JSON.stringify(updated));
+        return updated;
+      });
+    };
+    window.addEventListener('ezapu:schedule-updated', handleScheduleUpdate);
+    return () => window.removeEventListener('ezapu:schedule-updated', handleScheduleUpdate);
+  }, []);
+
   // Keyboard shortcut: Alt+C to toggle catalog
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -111,6 +137,71 @@ export default function App() {
     } catch (e) {
       console.warn('Failed to save resources to localStorage:', e);
     }
+  };
+
+  // Full resources list update
+  const handleUpdateResources = (updatedResources: Resource[]) => {
+    setResources(updatedResources);
+    try {
+      localStorage.setItem('ezapu_master_resources', JSON.stringify(updatedResources));
+    } catch (e) {
+      console.warn('Failed to save resources to localStorage:', e);
+    }
+  };
+
+  // Load template base project
+  const handleSelectProjectTemplate = (templateProject: Project, newResources: Resource[]) => {
+    if (newResources.length > 0) {
+      const existingCodes = new Set(resources.map((r) => r.code));
+      const filtered = newResources.filter((r) => !existingCodes.has(r.code));
+      const combined = [...resources, ...filtered];
+      handleUpdateResources(combined);
+    }
+    handleUpdateProject(templateProject);
+    if (templateProject.wbs.length > 0) {
+      const firstChapter = templateProject.wbs[0];
+      if (firstChapter.children && firstChapter.children.length > 0) {
+        setSelectedConceptId(firstChapter.children[0].conceptId || '');
+      }
+    }
+    setActiveTab('wbs');
+  };
+
+  // Transfer from honorarios to create or adapt project
+  const handleTransferFromHonorarios = (data: {
+    client: string;
+    projectName: string;
+    surfaceArea: number;
+    estimatedCost: number;
+    genreName: string;
+    honorarium?: number;
+    regionalFactor?: number;
+    scopePercent?: number;
+    serviceType?: 'arquitectura' | 'urbanismo' | 'dro';
+    professionalName?: string;
+    professionalLicense?: string;
+  }) => {
+    const newProj: Project = {
+      ...project,
+      name: data.projectName,
+      client: data.client,
+      location: 'México',
+      professionalFees: {
+        professionalName: data.professionalName,
+        professionalLicense: data.professionalLicense,
+        serviceType: data.serviceType || 'arquitectura',
+        genreName: data.genreName,
+        surfaceArea: data.surfaceArea,
+        baseConstructionCost: data.estimatedCost,
+        regionalFactor: data.regionalFactor || 0,
+        honorarium: data.honorarium || 0,
+        scopePercent: data.scopePercent || 0,
+        createdAt: new Date().toISOString(),
+      },
+      lastModified: new Date().toISOString(),
+    };
+    handleUpdateProject(newProj);
+    setActiveTab('wbs');
   };
 
   // Open specific concept in APU inspector
@@ -256,6 +347,7 @@ export default function App() {
         onToggleCatalog={() => setIsCatalogOpen((prev) => !prev)}
         onOpenMarkupModal={() => setShowMarkupModal(true)}
         onOpenProjectsModal={() => setShowProjectsModal(true)}
+        onOpenTemplatesModal={() => setShowTemplatesModal(true)}
         onExportExcel={() => exportBudgetToExcelHTML(project)}
         onExportCSV={() => exportBudgetToCSV(project)}
         hasSelectedConcept={Boolean(selectedConceptId && project.concepts[selectedConceptId])}
@@ -268,6 +360,10 @@ export default function App() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 lg:px-6 py-6">
+          {activeTab === 'honorarios' && (
+            <HonorariosView onTransferToProject={handleTransferFromHonorarios} />
+          )}
+
           {activeTab === 'wbs' && (
             <WBSTreeView
               project={project}
@@ -291,6 +387,16 @@ export default function App() {
             />
           )}
 
+          {activeTab === 'resources' && (
+            <ResourcesView
+              resources={resources}
+              currency={project.currency}
+              project={project}
+              onUpdateResources={handleUpdateResources}
+              onAddNewResource={handleAddNewResource}
+            />
+          )}
+
           {activeTab === 'explosion' && (
             <ResourceExplosionModal
               project={project}
@@ -301,7 +407,7 @@ export default function App() {
           )}
 
           {activeTab === 'schedule' && (
-            <ScheduleView project={project} onUpdateProject={handleUpdateProject} onExport={() => exportScheduleToCSV(project)} />
+            <ScheduleCPMView project={project} />
           )}
 
           {activeTab === 'estimates' && (
@@ -348,6 +454,13 @@ export default function App() {
         onClose={() => setShowProjectsModal(false)}
         currentProject={project}
         onUpdateProject={handleUpdateProject}
+      />
+
+      <TemplateSelectorModal
+        isOpen={showTemplatesModal}
+        onClose={() => setShowTemplatesModal(false)}
+        resources={resources}
+        onSelectProjectTemplate={handleSelectProjectTemplate}
       />
     </div>
   );

@@ -18,7 +18,7 @@ import {
 import { Project } from '../types/apu';
 import { formatCurrency, getBudgetTotals } from '../utils/calculations';
 
-export type ActiveTab = 'wbs' | 'apu' | 'explosion' | 'schedule' | 'estimates' | 'operations' | 'earned';
+export type ActiveTab = 'honorarios' | 'wbs' | 'apu' | 'resources' | 'explosion' | 'schedule' | 'estimates' | 'operations' | 'earned';
 
 interface TopNavbarProps {
   project: Project;
@@ -28,6 +28,7 @@ interface TopNavbarProps {
   onToggleCatalog: () => void;
   onOpenMarkupModal: () => void;
   onOpenProjectsModal: () => void;
+  onOpenTemplatesModal?: () => void;
   onExportExcel: () => void;
   onExportCSV: () => void;
   hasSelectedConcept: boolean;
@@ -41,6 +42,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
   onToggleCatalog,
   onOpenMarkupModal,
   onOpenProjectsModal,
+  onOpenTemplatesModal,
   onExportExcel,
   onExportCSV,
   hasSelectedConcept,
@@ -49,9 +51,9 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
 
   return (
     <header className="sticky top-0 z-30 bg-white border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 lg:px-6 h-14 flex items-center justify-between gap-6">
+      <div className="max-w-7xl mx-auto px-4 lg:px-6 h-14 flex items-center justify-between gap-4">
         {/* Zone 1: Brand Wordmark */}
-        <div className="flex items-center gap-3 shrink-0">
+        <div className="flex items-center gap-2.5 shrink-0">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-sm shadow-xs">
               EZ
@@ -66,7 +68,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
           <button
             onClick={onOpenProjectsModal}
             title="Gestionar o cambiar proyecto"
-            className="group flex items-center gap-1.5 text-xs text-slate-600 hover:text-slate-900 px-2 py-1 rounded-md hover:bg-slate-100 transition-colors max-w-[200px] truncate"
+            className="group flex items-center gap-1.5 text-xs text-slate-600 hover:text-slate-900 px-2 py-1 rounded-md hover:bg-slate-100 transition-colors max-w-[170px] truncate"
           >
             <FolderKanban className="w-3.5 h-3.5 text-blue-600 shrink-0" />
             <span className="font-medium truncate">{project.name}</span>
@@ -74,10 +76,22 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
         </div>
 
         {/* Zone 2: Navigation Links / Segmented View Selectors */}
-        <nav className="flex items-center gap-1 text-xs font-medium text-slate-600">
+        <nav className="flex items-center gap-1 text-xs font-medium text-slate-600 overflow-x-auto no-scrollbar py-1">
+          <button
+            onClick={() => onSelectTab('honorarios')}
+            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
+              activeTab === 'honorarios'
+                ? 'bg-slate-100 text-slate-900 font-semibold'
+                : 'hover:text-slate-900 hover:bg-slate-50'
+            }`}
+          >
+            <Calculator className="w-3.5 h-3.5 text-indigo-600" />
+            <span>Honorarios</span>
+          </button>
+
           <button
             onClick={() => onSelectTab('wbs')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
+            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
               activeTab === 'wbs'
                 ? 'bg-slate-100 text-slate-900 font-semibold'
                 : 'hover:text-slate-900 hover:bg-slate-50'
@@ -90,7 +104,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
           <button
             onClick={() => onSelectTab('apu')}
             disabled={!hasSelectedConcept}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
+            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
               activeTab === 'apu'
                 ? 'bg-slate-100 text-slate-900 font-semibold'
                 : hasSelectedConcept
@@ -99,36 +113,48 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
             }`}
           >
             <Calculator className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Matriz APU Detallada</span>
+            <span>Matriz APU</span>
+          </button>
+
+          <button
+            onClick={() => onSelectTab('resources')}
+            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
+              activeTab === 'resources'
+                ? 'bg-slate-100 text-slate-900 font-semibold'
+                : 'hover:text-slate-900 hover:bg-slate-50'
+            }`}
+          >
+            <Box className="w-3.5 h-3.5 text-cyan-600" />
+            <span>Insumos</span>
           </button>
 
           <button
             onClick={() => onSelectTab('explosion')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
+            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
               activeTab === 'explosion'
                 ? 'bg-slate-100 text-slate-900 font-semibold'
                 : 'hover:text-slate-900 hover:bg-slate-50'
             }`}
           >
             <FileSpreadsheet className="w-3.5 h-3.5 text-purple-600" />
-            <span>Explosión Insumos</span>
+            <span>Explosión</span>
           </button>
 
           <button
             onClick={() => onSelectTab('schedule')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
+            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
               activeTab === 'schedule'
                 ? 'bg-slate-100 text-slate-900 font-semibold'
                 : 'hover:text-slate-900 hover:bg-slate-50'
             }`}
           >
             <FileText className="w-3.5 h-3.5 text-orange-600" />
-            <span>Programación</span>
+            <span>Programa CPM</span>
           </button>
 
           <button
             onClick={() => onSelectTab('estimates')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
+            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
               activeTab === 'estimates' ? 'bg-slate-100 text-slate-900 font-semibold' : 'hover:text-slate-900 hover:bg-slate-50'
             }`}
           >
@@ -136,17 +162,29 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
             <span>Estimaciones</span>
           </button>
 
-          <button onClick={() => onSelectTab('operations')} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${activeTab === 'operations' ? 'bg-slate-100 text-slate-900 font-semibold' : 'hover:text-slate-900 hover:bg-slate-50'}`}>
+          <button onClick={() => onSelectTab('operations')} className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${activeTab === 'operations' ? 'bg-slate-100 text-slate-900 font-semibold' : 'hover:text-slate-900 hover:bg-slate-50'}`}>
             <Box className="w-3.5 h-3.5 text-amber-600" /><span>Operación</span>
           </button>
 
-          <button onClick={() => onSelectTab('earned')} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${activeTab === 'earned' ? 'bg-slate-100 text-slate-900 font-semibold' : 'hover:text-slate-900 hover:bg-slate-50'}`}>
+          <button onClick={() => onSelectTab('earned')} className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${activeTab === 'earned' ? 'bg-slate-100 text-slate-900 font-semibold' : 'hover:text-slate-900 hover:bg-slate-50'}`}>
             <TrendingUp className="w-3.5 h-3.5 text-violet-600" /><span>Valor ganado</span>
           </button>
         </nav>
 
         {/* Zone 3: Primary Actions & Utilities */}
         <div className="flex items-center gap-2 shrink-0">
+          {/* Plantillas Base Button */}
+          {onOpenTemplatesModal && (
+            <button
+              onClick={onOpenTemplatesModal}
+              title="Cargar obra modelo desde Catálogo 2022"
+              className="flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-blue-700 bg-blue-50 hover:bg-blue-100 rounded-md border border-blue-200 transition-colors whitespace-nowrap"
+            >
+              <Layers className="w-3.5 h-3.5 text-blue-600" />
+              <span>Plantillas Base</span>
+            </button>
+          )}
+
           {/* Sobrecostos & FSR Button */}
           <button
             onClick={onOpenMarkupModal}
@@ -154,7 +192,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
             title="Configurar Indirectos, Financiamiento, Utilidad y FSR"
           >
             <SlidersHorizontal className="w-3.5 h-3.5 text-slate-500" />
-            <span>Sobrecostos & FSR ({project.fsrConfig.calculatedFSR})</span>
+            <span>FSR ({project.fsrConfig.calculatedFSR})</span>
           </button>
 
           {/* Export Dropdown / Trigger */}
@@ -164,7 +202,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
             className="flex items-center gap-1 px-2.5 py-1.5 text-xs font-medium text-emerald-700 hover:bg-emerald-50 rounded-md border border-emerald-200 transition-colors whitespace-nowrap"
           >
             <Download className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Exportar Excel</span>
+            <span>Excel</span>
           </button>
 
           {/* Toggle Catalog Drawer Button */}

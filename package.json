@@ -9,7 +9,7 @@
     "name": "EZ-APU",
     "email": "peregrinadiego-byte@users.noreply.github.com"
   },
-"scripts": {
+  "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
     "preview": "vite preview",
@@ -38,20 +38,35 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.4.21",
+    "electron": "^44.7.2",
+    "electron-builder": "^26.15.3",
     "esbuild": "^0.28.2",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
     "typescript": "^7.0.2"
   },
   "build": {
-  "appId": "com.ezapu.studio",
-  "productName": "EZ-APU Studio",
-  "directories": { "output": "release" },
-  "files": ["dist/**/*", "desktop/**/*", "package.json"],
-  "linux": {
-    "category": "Utility",
-    "target": ["AppImage", "deb"]
-  },
-  "win": { "target": ["nsis"] }
-}
+    "appId": "com.ezapu.studio",
+    "productName": "EZ-APU Studio",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "desktop/**/*",
+      "package.json"
+    ],
+    "linux": {
+      "category": "Utility",
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  }
 }

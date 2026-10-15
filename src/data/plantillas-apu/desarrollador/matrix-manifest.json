@@ -1,0 +1,102 @@
+{
+  "category": "14.- DESARROLLADOR",
+  "slug": "desarrollador",
+  "chapters": {
+    "103": {
+      "file": "matrices/103.json",
+      "count": 446,
+      "bytes": 548861
+    },
+    "104": {
+      "file": "matrices/104.json",
+      "count": 406,
+      "bytes": 644154
+    },
+    "105": {
+      "file": "matrices/105.json",
+      "count": 264,
+      "bytes": 636326
+    },
+    "106": {
+      "file": "matrices/106.json",
+      "count": 568,
+      "bytes": 1428373
+    },
+    "107": {
+      "file": "matrices/107.json",
+      "count": 200,
+      "bytes": 590068
+    },
+    "108": {
+      "file": "matrices/108.json",
+      "count": 373,
+      "bytes": 620696
+    },
+    "109": {
+      "file": "matrices/109.json",
+      "count": 525,
+      "bytes": 963612
+    },
+    "110": {
+      "file": "matrices/110.json",
+      "count": 126,
+      "bytes": 401597
+    },
+    "111": {
+      "file": "matrices/111.json",
+      "count": 111,
+      "bytes": 3529051
+    },
+    "112": {
+      "file": "matrices/112.json",
+      "count": 106,
+      "bytes": 162116
+    },
+    "113": {
+      "file": "matrices/113.json",
+      "count": 76,
+      "bytes": 237112
+    },
+    "114": {
+      "file": "matrices/114.json",
+      "count": 1475,
+      "bytes": 1814925
+    },
+    "115": {
+      "file": "matrices/115.json",
+      "count": 2,
+      "bytes": 5832
+    },
+    "116": {
+      "file": "matrices/116.json",
+      "count": 74,
+      "bytes": 112172
+    },
+    "118": {
+      "file": "matrices/118.json",
+      "count": 33,
+      "bytes": 58840
+    },
+    "119": {
+      "file": "matrices/119.json",
+      "count": 29,
+      "bytes": 35327
+    },
+    "121": {
+      "file": "matrices/121.json",
+      "count": 2663,
+      "bytes": 4131692
+    },
+    "122": {
+      "file": "matrices/122.json",
+      "count": 358,
+      "bytes": 454764
+    },
+    "A10": {
+      "file": "matrices/A10.json",
+      "count": 10,
+      "bytes": 44195
+    }
+  },
+  "unmapped": null
+}

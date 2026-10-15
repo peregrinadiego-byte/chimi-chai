@@ -1,0 +1,156 @@
+[
+  {
+    "name": "01.- VIVIENDA DE INTERÉS SOCIAL",
+    "slug": "vivienda-de-interes-social",
+    "conceptCount": 103,
+    "matrixCount": 101,
+    "linkedConceptCount": 103,
+    "chapterCount": 13,
+    "matrixFiles": 1,
+    "matrixSharded": false
+  },
+  {
+    "name": "02.- VIVIENDA DE INTERÉS MEDIO",
+    "slug": "vivienda-de-interes-medio",
+    "conceptCount": 182,
+    "matrixCount": 181,
+    "linkedConceptCount": 182,
+    "chapterCount": 15,
+    "matrixFiles": 1,
+    "matrixSharded": false
+  },
+  {
+    "name": "03.- VIVIENDA RESIDENCIAL",
+    "slug": "vivienda-residencial",
+    "conceptCount": 229,
+    "matrixCount": 225,
+    "linkedConceptCount": 229,
+    "chapterCount": 18,
+    "matrixFiles": 1,
+    "matrixSharded": false
+  },
+  {
+    "name": "04.- ESTACIONAMIENTO",
+    "slug": "estacionamiento",
+    "conceptCount": 195,
+    "matrixCount": 188,
+    "linkedConceptCount": 195,
+    "chapterCount": 15,
+    "matrixFiles": 1,
+    "matrixSharded": false
+  },
+  {
+    "name": "05.- GIMNASIO",
+    "slug": "gimnasio",
+    "conceptCount": 226,
+    "matrixCount": 221,
+    "linkedConceptCount": 226,
+    "chapterCount": 17,
+    "matrixFiles": 1,
+    "matrixSharded": false
+  },
+  {
+    "name": "06.- EDIFICIO DE 20 DEPARTAMENTOS NIVEL ECONÓMICO",
+    "slug": "edificio-de-20-departamentos-nivel-economico",
+    "conceptCount": 161,
+    "matrixCount": 153,
+    "linkedConceptCount": 161,
+    "chapterCount": 19,
+    "matrixFiles": 1,
+    "matrixSharded": false
+  },
+  {
+    "name": "07.- EDIFICIO DE 20 DEPARTAMENTOS NIVEL MEDIO",
+    "slug": "edificio-de-20-departamentos-nivel-medio",
+    "conceptCount": 561,
+    "matrixCount": 305,
+    "linkedConceptCount": 561,
+    "chapterCount": 19,
+    "matrixFiles": 1,
+    "matrixSharded": false
+  },
+  {
+    "name": "08.- CENTRO COMERCIAL",
+    "slug": "centro-comercial",
+    "conceptCount": 1946,
+    "matrixCount": 1685,
+    "linkedConceptCount": 1939,
+    "chapterCount": 32,
+    "matrixFiles": 1,
+    "matrixSharded": false
+  },
+  {
+    "name": "09.- NAVE INDUSTRIAL",
+    "slug": "nave-industrial",
+    "conceptCount": 76,
+    "matrixCount": 74,
+    "linkedConceptCount": 76,
+    "chapterCount": 11,
+    "matrixFiles": 1,
+    "matrixSharded": false
+  },
+  {
+    "name": "10.- EDIFICIO ESTACIONAMIENTO",
+    "slug": "edificio-estacionamiento",
+    "conceptCount": 195,
+    "matrixCount": 188,
+    "linkedConceptCount": 195,
+    "chapterCount": 15,
+    "matrixFiles": 1,
+    "matrixSharded": false
+  },
+  {
+    "name": "11.- CARRETERAS",
+    "slug": "carreteras",
+    "conceptCount": 133,
+    "matrixCount": 133,
+    "linkedConceptCount": 133,
+    "chapterCount": 2,
+    "matrixFiles": 1,
+    "matrixSharded": false
+  },
+  {
+    "name": "12.- CONSTRUCTOR",
+    "slug": "constructor",
+    "conceptCount": 13948,
+    "matrixCount": 8740,
+    "linkedConceptCount": 8740,
+    "chapterCount": 44,
+    "matrixFiles": 3,
+    "matrixSharded": true,
+    "matrixManifest": "matrix-manifest.json"
+  },
+  {
+    "name": "13.- CONCURSOS",
+    "slug": "concursos",
+    "conceptCount": 14451,
+    "matrixCount": 7863,
+    "linkedConceptCount": 8010,
+    "chapterCount": 44,
+    "matrixFiles": 1,
+    "matrixSharded": true,
+    "matrixManifest": "matrix-manifest.json"
+  },
+  {
+    "name": "14.- DESARROLLADOR",
+    "slug": "desarrollador",
+    "conceptCount": 14470,
+    "matrixCount": 7845,
+    "linkedConceptCount": 8010,
+    "chapterCount": 44,
+    "matrixFiles": 1,
+    "matrixSharded": true,
+    "matrixManifest": "matrix-manifest.json"
+  },
+  {
+    "name": "15.- REMODELADOR",
+    "slug": "remodelador",
+    "conceptCount": 13935,
+    "matrixCount": 7863,
+    "linkedConceptCount": 8010,
+    "chapterCount": 44,
+    "matrixFiles": 1,
+    "matrixSharded": true,
+    "matrixManifest": "matrix-manifest.json"
+  }
+]
