@@ -112,7 +112,7 @@ export const ProjectManagerModal: React.FC<ProjectManagerModalProps> = ({
             totalPrice: 0,
           },
         ],
-        concepts: {},
+        concepts: {}, schedule: [], estimates: [], supplies: [], warehouseMovements: [],
         lastModified: new Date().toISOString(),
       };
       onUpdateProject(blank);
