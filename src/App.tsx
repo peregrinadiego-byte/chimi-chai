@@ -72,12 +72,7 @@ export default function App() {
   // Recalculate project on mount or whenever markup / items change
   const handleUpdateProject = useCallback((updated: Project) => {
   const recalculated = recalculateProject(updated, resourcesMap);
-
   setProject(recalculated);
-  setActiveTab('wbs');
-  setSelectedConceptId('');
-  setIsCatalogOpen(false);
-  setIsCatalogPinned(false);
 
   try {
     localStorage.setItem(
