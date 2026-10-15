@@ -4,7 +4,7 @@
  */
 
 import React, { useEffect, useState } from 'react';
-import { X, FolderKanban, Plus, Download, Upload, RotateCcw, Check, Sparkles, Building2 } from 'lucide-react';
+import { Plus, Download, Upload, RotateCcw, Check, Building2 } from 'lucide-react';
 import { Project } from '../types/apu';
 import { INITIAL_PROJECT } from '../data/seedData';
 import { downloadFile } from '../utils/exportUtils';
@@ -27,6 +27,7 @@ export const ProjectManagerModal: React.FC<ProjectManagerModalProps> = ({
   const [client, setClient] = useState(currentProject.client);
   const [location, setLocation] = useState(currentProject.location);
   const [currency, setCurrency] = useState(currentProject.currency || 'MXN');
+  const [message, setMessage] = useState('');
 
   // Electron/Linux can leave the renderer without keyboard focus after a
   // native confirm() dialog closes. Restore focus after project actions.
@@ -50,7 +51,7 @@ export const ProjectManagerModal: React.FC<ProjectManagerModalProps> = ({
     setClient(currentProject.client);
     setLocation(currentProject.location);
     setCurrency(currentProject.currency || 'MXN');
-  }, [currentProject]);
+  }, [currentProject.id]);
 
   if (!isOpen) return null;
 
@@ -84,30 +85,27 @@ export const ProjectManagerModal: React.FC<ProjectManagerModalProps> = ({
         const imported = JSON.parse(event.target?.result as string) as Project;
         if (imported.wbs && imported.concepts) {
           onUpdateProject(imported);
-          alert('¡Proyecto importado con éxito!');
+          setMessage('Proyecto importado correctamente.');
           onClose();
           restoreWindowFocus();
         } else {
-          alert('El archivo JSON no tiene la estructura de un proyecto EZ-APU válido.');
+          setMessage('El archivo JSON no tiene una estructura EZ-APU válida.');
         }
       } catch (err) {
-        alert('Error al leer el archivo JSON.');
+        setMessage('No fue posible leer el archivo JSON.');
       }
     };
     reader.readAsText(file);
   };
 
   const handleResetDemo = () => {
-    if (confirm('¿Restablecer el proyecto de demostración "Residencia Campestre Los Encinos"? Los cambios no guardados se perderán.')) {
-      onUpdateProject(INITIAL_PROJECT);
-      onClose();
-      restoreWindowFocus();
-    }
+    onUpdateProject(INITIAL_PROJECT);
+    onClose();
+    restoreWindowFocus();
   };
 
   const handleCreateBlank = () => {
-    if (confirm('¿Crear un nuevo presupuesto en blanco?')) {
-      const blank: Project = {
+    const blank: Project = {
         id: `proj_${Date.now()}`,
         name: 'Nuevo Presupuesto de Obra',
         code: `OBRA-${new Date().getFullYear()}-001`,
@@ -130,11 +128,10 @@ export const ProjectManagerModal: React.FC<ProjectManagerModalProps> = ({
         ],
         concepts: {},
         lastModified: new Date().toISOString(),
-      };
-      onUpdateProject(blank);
-      onClose();
-      restoreWindowFocus();
-    }
+    };
+    onUpdateProject(blank);
+    onClose();
+    restoreWindowFocus();
   };
 
   return (
@@ -150,6 +147,12 @@ export const ProjectManagerModal: React.FC<ProjectManagerModalProps> = ({
             ✕
           </button>
         </div>
+
+        {message && (
+          <p className="mt-3 rounded-md bg-blue-50 px-3 py-2 text-xs text-blue-700" role="status">
+            {message}
+          </p>
+        )}
 
         {/* Project Details Form */}
         <form onSubmit={handleSaveDetails} className="mt-4 space-y-3 text-xs">
