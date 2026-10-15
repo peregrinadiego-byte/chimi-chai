@@ -106,7 +106,67 @@ export interface Project {
   fsrConfig: FSRConfig;
   wbs: WBSNode[];
   concepts: Record<string, MatrixConcept>;
+  /** Optional M2 schedule data; kept optional for backward-compatible imports. */
+  schedule?: ScheduleTask[];
+  estimates?: Estimate[];
+  supplies?: SupplyOrder[];
+  warehouseMovements?: WarehouseMovement[];
   lastModified: string;
+}
+
+export interface EstimateItem {
+  conceptId: string;
+  quantity: number;
+  amount: number;
+}
+
+export interface Estimate {
+  id: string;
+  number: string;
+  date: string;
+  status: 'borrador' | 'presentada' | 'pagada';
+  items: EstimateItem[];
+  subtotal: number;
+  total: number;
+  notes?: string;
+}
+
+export interface SupplyOrder {
+  id: string;
+  date: string;
+  resourceId: string;
+  quantity: number;
+  received: number;
+  status: 'pendiente' | 'parcial' | 'recibida';
+  notes?: string;
+}
+
+export interface WarehouseMovement {
+  id: string;
+  date: string;
+  resourceId: string;
+  type: 'entrada' | 'salida';
+  quantity: number;
+  reference?: string;
+}
+
+export type ScheduleTaskStatus = 'planeado' | 'en_proceso' | 'terminado' | 'detenido';
+
+export interface ScheduleTask {
+  id: string;
+  code: string;
+  name: string;
+  parentId?: string;
+  predecessorId?: string;
+  startDate?: string;
+  endDate?: string;
+  durationDays: number;
+  progress: number;
+  weight: number;
+  responsible?: string;
+  status: ScheduleTaskStatus;
+  notes?: string;
+  linkedWbsId?: string;
 }
 
 export interface ResourceExplosionItem {

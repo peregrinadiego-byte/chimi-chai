@@ -55,6 +55,34 @@ export function exportBudgetToCSV(project: Project): void {
   downloadFile('\uFEFF' + lines.join('\n'), `Presupuesto_${project.code}_${new Date().toISOString().slice(0, 10)}.csv`, 'text/csv;charset=utf-8;');
 }
 
+function exportRows(filename: string, rows: string[][]): void {
+  const csv = '\ufeff' + rows.map((row) => row.map((value) => `"${String(value ?? '').replace(/"/g, '""')}"`).join(',')).join('\n');
+  downloadFile(csv, filename, 'text/csv;charset=utf-8');
+}
+
+export function exportScheduleToCSV(project: Project): void {
+  exportRows(`EZAPU_Programacion_${project.code}.csv`, [
+    ['Clave', 'Actividad', 'Inicio', 'Fin', 'Duracion', 'Avance', 'Peso', 'Responsable', 'Estado'],
+    ...(project.schedule || []).map((task) => [task.code, task.name, task.startDate || '', task.endDate || '', String(task.durationDays), `${task.progress}%`, String(task.weight), task.responsible || '', task.status]),
+  ]);
+}
+
+export function exportEstimatesToCSV(project: Project): void {
+  exportRows(`EZAPU_Estimaciones_${project.code}.csv`, [
+    ['Numero', 'Fecha', 'Estado', 'Subtotal', 'Total'],
+    ...(project.estimates || []).map((estimate) => [estimate.number, estimate.date, estimate.status, String(estimate.subtotal), String(estimate.total)]),
+  ]);
+}
+
+export function exportOperationsToCSV(project: Project, resources: Resource[]): void {
+  const resourceName = (id: string) => resources.find((resource) => resource.id === id)?.description || id;
+  exportRows(`EZAPU_Operacion_${project.code}.csv`, [
+    ['Tipo', 'Fecha', 'Recurso', 'Cantidad', 'Recibido', 'Estado'],
+    ...(project.supplies || []).map((item) => ['Suministro', item.date, resourceName(item.resourceId), String(item.quantity), String(item.received), item.status]),
+    ...(project.warehouseMovements || []).map((item) => ['Bodega', item.date, resourceName(item.resourceId), String(item.quantity), '', item.type]),
+  ]);
+}
+
 /**
  * Exports Resource Explosion to CSV.
  */

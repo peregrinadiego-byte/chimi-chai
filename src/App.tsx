@@ -17,7 +17,11 @@ import { ProjectManagerModal } from './components/ProjectManagerModal';
 import { FSRConfig, MarkupConfig, MatrixConcept, MatrixItem, Project, Resource, WBSNode } from './types/apu';
 import { INITIAL_PROJECT, MASTER_RESOURCES } from './data/seedData';
 import { recalculateProject } from './utils/calculations';
-import { exportBudgetToCSV, exportBudgetToExcelHTML } from './utils/exportUtils';
+import { exportBudgetToCSV, exportBudgetToExcelHTML, exportEstimatesToCSV, exportOperationsToCSV, exportScheduleToCSV } from './utils/exportUtils';
+import { ScheduleView } from './components/ScheduleView';
+import { EstimatesView } from './components/EstimatesView';
+import { OperationsView } from './components/OperationsView';
+import { EarnedValueView } from './components/EarnedValueView';
 
 export default function App() {
   // Load Project from localStorage or default seed
@@ -291,6 +295,20 @@ export default function App() {
               onBackToWBS={() => setActiveTab('wbs')}
             />
           )}
+
+          {activeTab === 'schedule' && (
+            <ScheduleView project={project} onUpdateProject={handleUpdateProject} onExport={() => exportScheduleToCSV(project)} />
+          )}
+
+          {activeTab === 'estimates' && (
+            <EstimatesView project={project} onUpdateProject={handleUpdateProject} onExport={() => exportEstimatesToCSV(project)} />
+          )}
+
+          {activeTab === 'operations' && (
+            <OperationsView project={project} resources={resources} onUpdateProject={handleUpdateProject} onExport={() => exportOperationsToCSV(project, resources)} />
+          )}
+
+          {activeTab === 'earned' && <EarnedValueView project={project} />}
         </div>
       </main>
 

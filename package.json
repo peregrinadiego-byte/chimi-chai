@@ -7,6 +7,9 @@
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
     "preview": "vite preview",
+    "test": "node --import tsx/esm tests/schedule.test.ts",
+    "desktop:dev": "npm run build -- --base ./ && electron desktop/main.cjs",
+    "desktop:build": "npm run build -- --base ./ && electron-builder",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit"
   },
@@ -33,5 +36,13 @@
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
     "typescript": "^7.0.2"
+  },
+  "build": {
+    "appId": "com.ezapu.studio",
+    "productName": "EZ-APU Studio",
+    "directories": { "output": "release" },
+    "files": ["dist/**/*", "desktop/**/*", "package.json"],
+    "linux": { "target": ["AppImage", "deb"] },
+    "win": { "target": ["nsis"] }
   }
 }

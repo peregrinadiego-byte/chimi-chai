@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { X, FolderKanban, Plus, Download, Upload, RotateCcw, Check, Sparkles, Building2 } from 'lucide-react';
 import { Project } from '../types/apu';
 import { INITIAL_PROJECT } from '../data/seedData';
@@ -27,6 +27,17 @@ export const ProjectManagerModal: React.FC<ProjectManagerModalProps> = ({
   const [client, setClient] = useState(currentProject.client);
   const [location, setLocation] = useState(currentProject.location);
   const [currency, setCurrency] = useState(currentProject.currency || 'MXN');
+
+  // Keep the configuration form synchronized with the active project.
+  // Without this, the form retained the values from the project that was
+  // active when the modal was first mounted.
+  useEffect(() => {
+    setName(currentProject.name);
+    setCode(currentProject.code);
+    setClient(currentProject.client);
+    setLocation(currentProject.location);
+    setCurrency(currentProject.currency || 'MXN');
+  }, [currentProject]);
 
   if (!isOpen) return null;
 

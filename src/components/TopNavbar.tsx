@@ -13,11 +13,12 @@ import {
   Box,
   Download,
   FileText
+  , TrendingUp
 } from 'lucide-react';
 import { Project } from '../types/apu';
 import { formatCurrency, getBudgetTotals } from '../utils/calculations';
 
-export type ActiveTab = 'wbs' | 'apu' | 'explosion';
+export type ActiveTab = 'wbs' | 'apu' | 'explosion' | 'schedule' | 'estimates' | 'operations' | 'earned';
 
 interface TopNavbarProps {
   project: Project;
@@ -111,6 +112,36 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
           >
             <FileSpreadsheet className="w-3.5 h-3.5 text-purple-600" />
             <span>Explosión Insumos</span>
+          </button>
+
+          <button
+            onClick={() => onSelectTab('schedule')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
+              activeTab === 'schedule'
+                ? 'bg-slate-100 text-slate-900 font-semibold'
+                : 'hover:text-slate-900 hover:bg-slate-50'
+            }`}
+          >
+            <FileText className="w-3.5 h-3.5 text-orange-600" />
+            <span>Programación</span>
+          </button>
+
+          <button
+            onClick={() => onSelectTab('estimates')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${
+              activeTab === 'estimates' ? 'bg-slate-100 text-slate-900 font-semibold' : 'hover:text-slate-900 hover:bg-slate-50'
+            }`}
+          >
+            <FileText className="w-3.5 h-3.5 text-emerald-600" />
+            <span>Estimaciones</span>
+          </button>
+
+          <button onClick={() => onSelectTab('operations')} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${activeTab === 'operations' ? 'bg-slate-100 text-slate-900 font-semibold' : 'hover:text-slate-900 hover:bg-slate-50'}`}>
+            <Box className="w-3.5 h-3.5 text-amber-600" /><span>Operación</span>
+          </button>
+
+          <button onClick={() => onSelectTab('earned')} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-colors whitespace-nowrap shrink-0 ${activeTab === 'earned' ? 'bg-slate-100 text-slate-900 font-semibold' : 'hover:text-slate-900 hover:bg-slate-50'}`}>
+            <TrendingUp className="w-3.5 h-3.5 text-violet-600" /><span>Valor ganado</span>
           </button>
         </nav>
 
