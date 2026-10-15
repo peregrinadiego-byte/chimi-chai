@@ -44,12 +44,14 @@
     "typescript": "^7.0.2"
   },
   "build": {
-    "appId": "com.ezapu.studio",
-    "productName": "EZ-APU Studio",
-    "desktopName": "ez-apu-studio",
-    "directories": { "output": "release" },
-    "files": ["dist/**/*", "desktop/**/*", "package.json"],
-    "linux": { "category": "Utility", "target": ["AppImage", "deb"] },
-    "win": { "target": ["nsis"] }
-  }
+  "appId": "com.ezapu.studio",
+  "productName": "EZ-APU Studio",
+  "directories": { "output": "release" },
+  "files": ["dist/**/*", "desktop/**/*", "package.json"],
+  "linux": {
+    "category": "Utility",
+    "target": ["AppImage", "deb"]
+  },
+  "win": { "target": ["nsis"] }
+}
 }
