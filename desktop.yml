@@ -1,0 +1,40 @@
+name: Build desktop installers
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            target: --linux AppImage deb
+          - os: windows-latest
+            target: --win nsis
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - run: npm install --no-save --no-audit --no-fund electron@^39.0.0 electron-builder@^26.0.12
+      - run: npm run desktop:build -- ${{ matrix.target }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: EZ-APU-${{ matrix.os }}
+          path: release/*
+
+      - name: Publicar instaladores en Releases
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release/*
+          generate_release_notes: true
