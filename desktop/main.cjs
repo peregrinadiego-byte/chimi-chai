@@ -1,6 +1,13 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('node:path');
 
+// On some Ubuntu Wayland sessions Electron can lose keyboard input after a
+// native dialog closes. X11 keeps focus stable for the packaged desktop app.
+if (process.platform === 'linux') {
+  app.commandLine.appendSwitch('ozone-platform', 'x11');
+  app.commandLine.appendSwitch('disable-features', 'WaylandWindowDecorations');
+}
+
 function createWindow() {
   const window = new BrowserWindow({
     width: 1440,
