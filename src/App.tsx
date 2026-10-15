@@ -71,14 +71,23 @@ export default function App() {
 
   // Recalculate project on mount or whenever markup / items change
   const handleUpdateProject = useCallback((updated: Project) => {
-    const recalculated = recalculateProject(updated, resourcesMap);
-    setProject(recalculated);
-    try {
-      localStorage.setItem('ezapu_active_project', JSON.stringify(recalculated));
-    } catch (e) {
-      console.warn('Failed to save project to localStorage:', e);
-    }
-  }, [resourcesMap]);
+  const recalculated = recalculateProject(updated, resourcesMap);
+
+  setProject(recalculated);
+  setActiveTab('wbs');
+  setSelectedConceptId('');
+  setIsCatalogOpen(false);
+  setIsCatalogPinned(false);
+
+  try {
+    localStorage.setItem(
+      'ezapu_active_project',
+      JSON.stringify(recalculated)
+    );
+  } catch (e) {
+    console.warn('Failed to save project to localStorage:', e);
+  }
+}, [resourcesMap]);
 
   // Initial recalculation on mount to guarantee fresh numbers
   useEffect(() => {
