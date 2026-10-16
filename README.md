@@ -34,7 +34,7 @@ Los instaladores se generan en `release/`; esa carpeta está excluida del reposi
 
 ## Publicación en GitHub Pages
 
-El proyecto incluye el workflow `.github/workflows/deploy-pages.yml`. En GitHub se debe activar Pages con **GitHub Actions** como fuente. El nombre de repositorio previsto es `EZ-APU`, por lo que Vite utiliza la base `/EZ-APU/`.
+El proyecto incluye un workflow para GitHub Pages. En GitHub se debe activar Pages con **GitHub Actions** como fuente. El repositorio se llama `chimi-chai`, por lo que Vite utiliza la base `/chimi-chai/`.
 
 ## Datos y privacidad
 

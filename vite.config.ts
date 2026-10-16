@@ -5,8 +5,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    // Cambia este valor si el repositorio de GitHub utiliza otro nombre.
-    base: '/EZ-APU/',
+    // El repositorio de GitHub se llama chimi-chai.
+    base: '/chimi-chai/',
 
     plugins: [react(), tailwindcss()],
     resolve: {
