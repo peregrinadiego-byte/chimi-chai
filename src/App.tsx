@@ -25,6 +25,8 @@ import { EarnedValueView } from './components/EarnedValueView';
 import { ResourcesView } from './components/ResourcesView';
 import { HonorariosView } from './components/HonorariosView';
 import { TemplateSelectorModal } from './components/TemplateSelectorModal';
+import { GeneratorsView } from './components/GeneratorsView';
+import { loadPersistedProject, saveProject } from './utils/persistence';
 
 export default function App() {
   // Load Project from localStorage or default seed
@@ -79,10 +81,7 @@ export default function App() {
   setProject(recalculated);
 
   try {
-    localStorage.setItem(
-      'ezapu_active_project',
-      JSON.stringify(recalculated)
-    );
+    void saveProject(recalculated);
   } catch (e) {
     console.warn('Failed to save project to localStorage:', e);
   }
@@ -92,6 +91,20 @@ export default function App() {
   useEffect(() => {
     const freshlyCalculated = recalculateProject(project, resourcesMap);
     setProject(freshlyCalculated);
+  }, []);
+
+  // IndexedDB permite recuperar plantillas grandes que superan la cuota de
+  // localStorage, sin cambiar el arranque rápido de proyectos pequeños.
+  useEffect(() => {
+    let cancelled = false;
+    void loadPersistedProject().then((persisted) => {
+      if (!cancelled && persisted && persisted.lastModified !== project.lastModified) {
+        setProject(recalculateProject(persisted, resourcesMap));
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // ScheduleCPMView emits normalized activities without coupling the view to the app state.
@@ -108,7 +121,7 @@ export default function App() {
           scheduleCalendarMode: Array.isArray(detail) ? current.scheduleCalendarMode : detail.calendarMode,
           lastModified: new Date().toISOString(),
         };
-        localStorage.setItem('ezapu_active_project', JSON.stringify(updated));
+        void saveProject(updated);
         return updated;
       });
     };
@@ -357,7 +370,7 @@ export default function App() {
       <main
         className={`flex-1 transition-all duration-200 ease-out ${
           isCatalogOpen && isCatalogPinned ? 'mr-96' : 'mr-0'
-        }`}
+        } lg:pl-52`}
       >
         <div className="max-w-7xl mx-auto px-4 lg:px-6 py-6">
           {activeTab === 'honorarios' && (
@@ -384,6 +397,15 @@ export default function App() {
               onBackToWBS={() => setActiveTab('wbs')}
               onOpenCatalog={() => setIsCatalogOpen(true)}
               currency={project.currency}
+            />
+          )}
+
+          {activeTab === 'generators' && (
+            <GeneratorsView
+              project={project}
+              onUpdateProject={handleUpdateProject}
+              selectedConceptId={selectedConceptId}
+              onSelectConcept={handleSelectConcept}
             />
           )}
 

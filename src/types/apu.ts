@@ -113,9 +113,44 @@ export interface Project {
   estimates?: Estimate[];
   supplies?: SupplyOrder[];
   warehouseMovements?: WarehouseMovement[];
+  /** Números Generadores / Volúmenes de obra por concepto */
+  generators?: Record<string, GeneratorSheet>;
   /** Datos de la encomienda y honorarios que originaron la obra. */
   professionalFees?: ProfessionalFees;
   lastModified: string;
+}
+
+export interface GeneratorRow {
+  id: string;
+  eje: string;
+  tramoDesde: string;
+  tramoHasta: string;
+  largo: number;
+  ancho: number;
+  alto: number;
+  piezas: number;
+  subtotal: number;
+  observaciones?: string;
+}
+
+export interface GeneratorSheet {
+  id: string;
+  conceptId: string;
+  conceptCode: string;
+  conceptDescription: string;
+  unit: string;
+  partida: string;
+  contratista: string;
+  direccion: string;
+  obraNombre: string;
+  clienteNombre: string;
+  fecha: string;
+  rows: GeneratorRow[];
+  totalVolume: number;
+  responsableEmpresa?: string;
+  responsableContratante?: string;
+  /** Nombre base del formato institucional usado para exportar la ficha. */
+  templateName?: string;
 }
 
 export interface ProfessionalFees {
@@ -135,6 +170,9 @@ export interface EstimateItem {
   conceptId: string;
   quantity: number;
   amount: number;
+  /** Permite demostrar que la cantidad estimada proviene de un generador. */
+  generatorSheetId?: string;
+  generatorVolume?: number;
 }
 
 export interface Estimate {

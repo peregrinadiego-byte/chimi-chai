@@ -13,6 +13,8 @@ export interface TemplateCategory {
   matrixCount: number;
   linkedConceptCount: number;
   chapterCount: number;
+  matrixSharded?: boolean;
+  matrixManifest?: string;
 }
 
 export const TEMPLATE_CATEGORIES: TemplateCategory[] = categoriesData as TemplateCategory[];

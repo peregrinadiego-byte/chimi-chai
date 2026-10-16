@@ -8,6 +8,12 @@ import { Layers, Check, Sparkles, Building, ChevronRight, AlertCircle, Loader2 }
 import { Project, Resource } from '../types/apu';
 import { TEMPLATE_CATEGORIES, TemplateCategory, buildProjectFromTemplate } from '../utils/templateLoader';
 
+// Vite necesita conocer por adelantado los archivos que pueden cargar los
+// catálogos grandes. Las cuatro categorías más pesadas guardan sus matrices
+// en fragmentos dentro de `matrices/`, no en un único matrices.json.
+const matrixShardModules = import.meta.glob('../data/plantillas-apu/*/matrices/*.json');
+const matrixManifestModules = import.meta.glob('../data/plantillas-apu/*/matrix-manifest.json');
+
 interface TemplateSelectorModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -34,14 +40,42 @@ export const TemplateSelectorModal: React.FC<TemplateSelectorModalProps> = ({
     setErrorMsg('');
 
     try {
-      // Dynamic imports for the chosen category files
+      // Dynamic import for the selected structure.
       const structureModule = await import(`../data/plantillas-apu/${selectedSlug}/structure.json`);
-      const matricesModule = await import(`../data/plantillas-apu/${selectedSlug}/matrices.json`);
+      let matrices: Record<string, any>;
+
+      if (currentCategory.matrixSharded && currentCategory.matrixManifest) {
+        const manifestKey = `../data/plantillas-apu/${selectedSlug}/${currentCategory.matrixManifest}`;
+        const loadManifest = matrixManifestModules[manifestKey];
+        if (!loadManifest) {
+          throw new Error(`No se encontró el manifiesto de matrices ${manifestKey}`);
+        }
+        const manifestModule = (await loadManifest()) as { default?: { chapters?: Record<string, { file: string }> } } | { chapters?: Record<string, { file: string }> };
+        const manifest = (
+          'default' in manifestModule && manifestModule.default
+            ? manifestModule.default
+            : manifestModule
+        ) as { chapters?: Record<string, { file: string }> };
+        matrices = {};
+
+        for (const shard of Object.values(manifest.chapters || {}) as Array<{ file: string }>) {
+          const shardKey = `../data/plantillas-apu/${selectedSlug}/${shard.file}`;
+          const loadShard = matrixShardModules[shardKey];
+          if (!loadShard) {
+            throw new Error(`No se encontró el fragmento de matrices ${shardKey}`);
+          }
+          const shardModule = (await loadShard()) as { default?: Record<string, any> } | Record<string, any>;
+          Object.assign(matrices, shardModule.default || shardModule);
+        }
+      } else {
+        const matricesModule = await import(`../data/plantillas-apu/${selectedSlug}/matrices.json`);
+        matrices = matricesModule.default || matricesModule;
+      }
 
       const { project, newResources } = buildProjectFromTemplate(
         currentCategory.name,
         structureModule.default || structureModule,
-        matricesModule.default || matricesModule,
+        matrices,
         resources
       );
 
