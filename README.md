@@ -23,10 +23,5 @@ npm run lint
 npm run build
 ```
 
-## Versión de escritorio
-
-```bash
-npm run desktop:dev
-npm run desktop:build
-```
-
+<!-- O un enlace directo con botón o texto -->
+[📥 Descargar los archivos más recientes](https://github.com/peregrinadiego-byte/chimi-chai/releases/latest)
