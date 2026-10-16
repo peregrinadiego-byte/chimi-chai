@@ -44,5 +44,7 @@ Esta herramienta implementa la metodología y fórmulas del **Arancel de Honorar
 ##  Tutorial básico
 
 https://github.com/user-attachments/assets/8e88d320-4975-4ac7-acad-2944f784c347
+<img width="1334" height="854" alt="Captura de pantalla 2026-10-16 113940" src="https://github.com/user-attachments/assets/7a9f76ad-c5d5-49fc-9f57-1104b82e409f" />
+
 
 
