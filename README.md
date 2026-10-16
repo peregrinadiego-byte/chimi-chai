@@ -33,6 +33,9 @@ Esta herramienta implementa la metodología y fórmulas del **Arancel de Honorar
 | 📊 **Cálculo Normado FCARM** | Convierte metros cuadrados y complejidad en aranceles profesionales oficiales. |
 | 📑 **Desglose de Servicios** | Clasificación por etapas: Anteproyecto, Proyecto Ejecutivo, Dirección de Obra y Estudios Previos. |
 | 🔒 **Privacidad Total** | Los datos del profesionista y la cédula permanecen en el navegador y no se guardan en servidor. |
+|  **Plantillas base** | La herramienta proporciona mas de 14 plantillas de partidas de obra con sus respectivos conceptos (matriz) para ser utilizadas como base de trabajo. |
+|  **Insumos** | El modulo de insumos permite crear, administrar y configurar insumos según categoría, y da la oportunidad de validad que conceptos o insumos están siendo utilizados en la obra actual. |
+|  **Números Generadores** | Chimi y chai incluyen la opción de plantillas de numeros generadores vinculables con el proyecto. |
 
 ---
 
