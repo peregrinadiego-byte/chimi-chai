@@ -30,12 +30,3 @@ npm run desktop:dev
 npm run desktop:build
 ```
 
-Los instaladores se generan en `release/`; esa carpeta está excluida del repositorio.
-
-## Publicación en GitHub Pages
-
-El proyecto incluye un workflow para GitHub Pages. En GitHub se debe activar Pages con **GitHub Actions** como fuente. El repositorio se llama `chimi-chai`, por lo que Vite utiliza la base `/chimi-chai/`.
-
-## Datos y privacidad
-
-Los datos de la obra se guardan localmente en el navegador mediante `localStorage`. No se deben subir credenciales, archivos `.env`, instaladores ni bases de datos con información sensible.
