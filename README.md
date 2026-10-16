@@ -40,3 +40,9 @@ Esta herramienta implementa la metodología y fórmulas del **Arancel de Honorar
 ---
 
 [📥 Descargar los archivos más recientes para instalar en windows o linux (ubuntu y distros similares)](https://github.com/peregrinadiego-byte/chimi-chai/releases/latest)
+
+##  Tutorial básico
+
+https://github.com/user-attachments/assets/8e88d320-4975-4ac7-acad-2944f784c347
+
+
