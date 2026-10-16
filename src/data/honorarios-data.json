@@ -1,0 +1,1008 @@
+{
+  "source": "Formula-Aranceles-FCARM-2022.xlsx",
+  "data": {
+    "factors": [
+      {
+        "code": "A-1",
+        "factor": 1.39,
+        "name": "Asilos, Orfelinatos"
+      },
+      {
+        "code": "A-2",
+        "factor": 1.06,
+        "name": "Casas de Empeño"
+      },
+      {
+        "code": "A-3",
+        "factor": 1.55,
+        "name": "Centros de Rehabilitación"
+      },
+      {
+        "code": "A-4",
+        "factor": 1.24,
+        "name": "Centros de Protección"
+      },
+      {
+        "code": "A-5",
+        "factor": 1.2,
+        "name": "Dormitorios Públicos"
+      },
+      {
+        "code": "A-6",
+        "factor": 1.16,
+        "name": "Guarderías"
+      },
+      {
+        "code": "B-1",
+        "factor": 1.45,
+        "name": "Agencias de Vehículos"
+      },
+      {
+        "code": "B-2",
+        "factor": 1.04,
+        "name": "Centros de Abasto"
+      },
+      {
+        "code": "B-3",
+        "factor": 2.12,
+        "name": "Centros Comerciales"
+      },
+      {
+        "code": "B-4",
+        "factor": 1.86,
+        "name": "Centros de Exposiciones"
+      },
+      {
+        "code": "B-5",
+        "factor": 1.79,
+        "name": "Edificios Comerciales y Oficinas"
+      },
+      {
+        "code": "B-6",
+        "factor": 1.89,
+        "name": "Farmacias y Doguerías"
+      },
+      {
+        "code": "B-7",
+        "factor": 1.89,
+        "name": "Ferreterías y Tlapalerías"
+      },
+      {
+        "code": "B-8",
+        "factor": 2.07,
+        "name": "Joyerías"
+      },
+      {
+        "code": "B-9",
+        "factor": 1.89,
+        "name": "Librerías"
+      },
+      {
+        "code": "B-10",
+        "factor": 1.04,
+        "name": "Mercados"
+      },
+      {
+        "code": "B-11",
+        "factor": 1.69,
+        "name": "Supermercados y Autoservicios"
+      },
+      {
+        "code": "B-12",
+        "factor": 1.66,
+        "name": "Interiorismo Comercial"
+      },
+      {
+        "code": "B-13",
+        "factor": 1.94,
+        "name": "Tiendas de Departamentos"
+      },
+      {
+        "code": "B-14",
+        "factor": 2.07,
+        "name": "Tiendas Especializadas"
+      },
+      {
+        "code": "B-15",
+        "factor": 1.37,
+        "name": "Locales Comerciales"
+      },
+      {
+        "code": "B-16",
+        "factor": 0.62,
+        "name": "Stands"
+      },
+      {
+        "code": "C-1",
+        "factor": 1.45,
+        "name": "Agencias de Noticias"
+      },
+      {
+        "code": "C-2",
+        "factor": 1.55,
+        "name": "Centrales Telefónicas"
+      },
+      {
+        "code": "C-3",
+        "factor": 1.14,
+        "name": "Centros de Internet"
+      },
+      {
+        "code": "C-4",
+        "factor": 1.24,
+        "name": "Edificio de Correos"
+      },
+      {
+        "code": "C-5",
+        "factor": 1.24,
+        "name": "Edificios de Telégrafos"
+      },
+      {
+        "code": "C-6",
+        "factor": 2.28,
+        "name": "Estudios de Audio y Video"
+      },
+      {
+        "code": "C-7",
+        "factor": 1.97,
+        "name": "Estudios de Cine"
+      },
+      {
+        "code": "C-8",
+        "factor": 2.17,
+        "name": "Estudios de T.V."
+      },
+      {
+        "code": "C-9",
+        "factor": 1.14,
+        "name": "Paquetería y Envíos"
+      },
+      {
+        "code": "C-10",
+        "factor": 1.24,
+        "name": "Prensa"
+      },
+      {
+        "code": "C-11",
+        "factor": 1.59,
+        "name": "Radiodifusoras"
+      },
+      {
+        "code": "d-1.1",
+        "factor": 2.07,
+        "name": "Terminales Aereas"
+      },
+      {
+        "code": "d-1.2",
+        "factor": 1.27,
+        "name": "Hangares"
+      },
+      {
+        "code": "d-1.3",
+        "factor": 2.69,
+        "name": "Torres de Control"
+      },
+      {
+        "code": "d-1.4",
+        "factor": 0.31,
+        "name": "Obra  Exterior"
+      },
+      {
+        "code": "D-2",
+        "factor": 1.24,
+        "name": "Casetas de Peaje"
+      },
+      {
+        "code": "D-3",
+        "factor": 1.35,
+        "name": "Centrales de Autobuses"
+      },
+      {
+        "code": "D-4",
+        "factor": 1.35,
+        "name": "Estaciones de Ferrocarril"
+      },
+      {
+        "code": "D-5",
+        "factor": 1.76,
+        "name": "Estaciones de Transporte Colec."
+      },
+      {
+        "code": "D-6",
+        "factor": 1.76,
+        "name": "Instalaciones Portuarias"
+      },
+      {
+        "code": "D-7",
+        "factor": 1.04,
+        "name": "Paraderos de Autobuses"
+      },
+      {
+        "code": "D-8",
+        "factor": 0.58,
+        "name": "Talleres de Mantenimiento"
+      },
+      {
+        "code": "D-9",
+        "factor": 1.04,
+        "name": "Taquillas y Salas de Espera"
+      },
+      {
+        "code": "E-1",
+        "factor": 1.35,
+        "name": "Auditorios"
+      },
+      {
+        "code": "E-2",
+        "factor": 1.45,
+        "name": "Bibliotecas"
+      },
+      {
+        "code": "E-3",
+        "factor": 1.24,
+        "name": "Casas de Cultura"
+      },
+      {
+        "code": "E-4",
+        "factor": 1.24,
+        "name": "Centros de Arte"
+      },
+      {
+        "code": "E-5",
+        "factor": 1.35,
+        "name": "Editoriales"
+      },
+      {
+        "code": "E-6",
+        "factor": 1.55,
+        "name": "Galerías de Arte"
+      },
+      {
+        "code": "E-7",
+        "factor": 2.48,
+        "name": "Monumentos"
+      },
+      {
+        "code": "E-8",
+        "factor": 1.55,
+        "name": "Museos"
+      },
+      {
+        "code": "E-9",
+        "factor": 2.07,
+        "name": "Pabellones Internacionales y Nac."
+      },
+      {
+        "code": "E-10",
+        "factor": 2.17,
+        "name": "Salas de Concierto"
+      },
+      {
+        "code": "E-11",
+        "factor": 1.24,
+        "name": "Talleres de Arte"
+      },
+      {
+        "code": "E-12",
+        "factor": 2.07,
+        "name": "Teatros"
+      },
+      {
+        "code": "F-1",
+        "factor": 3.01,
+        "name": "Albercas Recreativas"
+      },
+      {
+        "code": "F-2",
+        "factor": 1.45,
+        "name": "Boliche"
+      },
+      {
+        "code": "F-3",
+        "factor": 0.21,
+        "name": "Canchas Descubiertas"
+      },
+      {
+        "code": "F-4",
+        "factor": 1.24,
+        "name": "Clubes Deportivos"
+      },
+      {
+        "code": "F-5",
+        "factor": 0.83,
+        "name": "Gimnasios y Canchas Cubiertas"
+      },
+      {
+        "code": "f-6.1",
+        "factor": 1.24,
+        "name": "Casa Club"
+      },
+      {
+        "code": "f-6.2",
+        "factor": 0.04,
+        "name": "Campo de Golf"
+      },
+      {
+        "code": "f-7.1",
+        "factor": 1.24,
+        "name": "Casa Club"
+      },
+      {
+        "code": "f-7.2",
+        "factor": 0.04,
+        "name": "Campo de Tiro"
+      },
+      {
+        "code": "F-8",
+        "factor": 1.04,
+        "name": "Unidades Deportivas"
+      },
+      {
+        "code": "G-1",
+        "factor": 1.08,
+        "name": "Academias"
+      },
+      {
+        "code": "G-2",
+        "factor": 1.45,
+        "name": "Céntros de Investigación"
+      },
+      {
+        "code": "G-3",
+        "factor": 1.35,
+        "name": "Campus de Educación Superior"
+      },
+      {
+        "code": "G-4",
+        "factor": 1.15,
+        "name": "Escuelas Preescolares"
+      },
+      {
+        "code": "G-5",
+        "factor": 1.15,
+        "name": "Escuelas Primarias"
+      },
+      {
+        "code": "G-6",
+        "factor": 1.15,
+        "name": "Escuelas Secundarias"
+      },
+      {
+        "code": "G-7",
+        "factor": 1.39,
+        "name": "Escuelas Preparatorias"
+      },
+      {
+        "code": "G-8",
+        "factor": 1.39,
+        "name": "Escuelas Vocacionales"
+      },
+      {
+        "code": "G-9",
+        "factor": 1.39,
+        "name": "Escuelas Técnicas"
+      },
+      {
+        "code": "G-10",
+        "factor": 1.45,
+        "name": "Escuelas de Educación Especial"
+      },
+      {
+        "code": "G-11",
+        "factor": 1.45,
+        "name": "Escuelas de Educación Superior"
+      },
+      {
+        "code": "G-12",
+        "factor": 1.24,
+        "name": "Internados"
+      },
+      {
+        "code": "G-13",
+        "factor": 1.45,
+        "name": "Laboratorios"
+      },
+      {
+        "code": "G-14",
+        "factor": 1.45,
+        "name": "Laboratorios de Enseñanza"
+      },
+      {
+        "code": "G-15",
+        "factor": 1.39,
+        "name": "Normales"
+      },
+      {
+        "code": "H-1",
+        "factor": 1.2,
+        "name": "Bancos"
+      },
+      {
+        "code": "H-2",
+        "factor": 1.28,
+        "name": "Casas de Bolsa"
+      },
+      {
+        "code": "H-3",
+        "factor": 1.28,
+        "name": "Casas de Cambio"
+      },
+      {
+        "code": "H-4",
+        "factor": 1.22,
+        "name": "Oficinas Centrales y Regionales"
+      },
+      {
+        "code": "H-5",
+        "factor": 1.2,
+        "name": "Organizaciones Auxiliares"
+      },
+      {
+        "code": "I-1",
+        "factor": 1.14,
+        "name": "Archivos"
+      },
+      {
+        "code": "i-2.1",
+        "factor": 1.35,
+        "name": "Edificios"
+      },
+      {
+        "code": "i-2.2",
+        "factor": 0.06,
+        "name": "Obra Exterior"
+      },
+      {
+        "code": "I-3",
+        "factor": 1.2,
+        "name": "Cuarteles Militares"
+      },
+      {
+        "code": "I-4",
+        "factor": 1.38,
+        "name": "Oficinas Estatales"
+      },
+      {
+        "code": "I-5",
+        "factor": 1.38,
+        "name": "Oficinas Federales"
+      },
+      {
+        "code": "I-6",
+        "factor": 1.05,
+        "name": "Oficinas Municipales"
+      },
+      {
+        "code": "I-7",
+        "factor": 1.64,
+        "name": "Palacios de Gobierno"
+      },
+      {
+        "code": "I-8",
+        "factor": 1.59,
+        "name": "Sedes Judiciales"
+      },
+      {
+        "code": "I-9",
+        "factor": 1.59,
+        "name": "Sedes Legislativas"
+      },
+      {
+        "code": "J-1",
+        "factor": 1.04,
+        "name": "Condominios de Interés Social"
+      },
+      {
+        "code": "J-2",
+        "factor": 1.34,
+        "name": "Condominios de Interés Medio"
+      },
+      {
+        "code": "J-3",
+        "factor": 1.57,
+        "name": "Condominios Residenciales"
+      },
+      {
+        "code": "J-4",
+        "factor": 1.49,
+        "name": "Edificios de Apartamentos"
+      },
+      {
+        "code": "J-5",
+        "factor": 0.84,
+        "name": "Vivienda Progresiva"
+      },
+      {
+        "code": "J-6",
+        "factor": 1,
+        "name": "Vivienda de Interés Social"
+      },
+      {
+        "code": "J-7",
+        "factor": 1.14,
+        "name": "Vivienda de Interés Medio"
+      },
+      {
+        "code": "J-8",
+        "factor": 1.28,
+        "name": "Casa-Habitación Residencial"
+      },
+      {
+        "code": "J-9",
+        "factor": 1.89,
+        "name": "Residencias de Lujo"
+      },
+      {
+        "code": "K-1",
+        "factor": 0.06,
+        "name": "Áreas Exteriores"
+      },
+      {
+        "code": "K-2",
+        "factor": 0.55,
+        "name": "Bodegas y Almacenes"
+      },
+      {
+        "code": "K-3",
+        "factor": 1.22,
+        "name": "Laboratorios"
+      },
+      {
+        "code": "K-4",
+        "factor": 0.86,
+        "name": "Naves Industriales"
+      },
+      {
+        "code": "K-5",
+        "factor": 1.18,
+        "name": "Oficinas"
+      },
+      {
+        "code": "K-6",
+        "factor": 1.14,
+        "name": "Servicios del Personal"
+      },
+      {
+        "code": "K-7",
+        "factor": 0.57,
+        "name": "Talleres"
+      },
+      {
+        "code": "L-1",
+        "factor": 1.14,
+        "name": "Casetas de Seguridad Pública"
+      },
+      {
+        "code": "l-2.1",
+        "factor": 1.18,
+        "name": "Edificicios"
+      },
+      {
+        "code": "l-2.2",
+        "factor": 0.06,
+        "name": "Obra Exterior"
+      },
+      {
+        "code": "l-3.1",
+        "factor": 1.18,
+        "name": "Edificicios"
+      },
+      {
+        "code": "l-3.2",
+        "factor": 0.06,
+        "name": "Obra Exterior"
+      },
+      {
+        "code": "L-4",
+        "factor": 1.2,
+        "name": "Cuarteles de Seguridad Pública"
+      },
+      {
+        "code": "l-5.1",
+        "factor": 1.18,
+        "name": "Edificicios"
+      },
+      {
+        "code": "l-5.2",
+        "factor": 0.06,
+        "name": "Obra Exterior"
+      },
+      {
+        "code": "l-6.1",
+        "factor": 1.18,
+        "name": "Edificicios"
+      },
+      {
+        "code": "l-6.2",
+        "factor": 0.06,
+        "name": "Obra Exterior"
+      },
+      {
+        "code": "L-7",
+        "factor": 1.22,
+        "name": "Laboratorios Especializados"
+      },
+      {
+        "code": "L-8",
+        "factor": 1.3,
+        "name": "SEMEFO´s"
+      },
+      {
+        "code": "M-1",
+        "factor": 1.3,
+        "name": "Arenas Deportivas"
+      },
+      {
+        "code": "M-2",
+        "factor": 1.86,
+        "name": "Autódromos"
+      },
+      {
+        "code": "M-3",
+        "factor": 1.04,
+        "name": "Billares"
+      },
+      {
+        "code": "M-4",
+        "factor": 1.3,
+        "name": "Centros Nocturnos"
+      },
+      {
+        "code": "M-5",
+        "factor": 1.76,
+        "name": "Cinemas"
+      },
+      {
+        "code": "M-6",
+        "factor": 1.32,
+        "name": "Estadios"
+      },
+      {
+        "code": "M-7",
+        "factor": 1.86,
+        "name": "Hipódromo"
+      },
+      {
+        "code": "M-8",
+        "factor": 0.04,
+        "name": "Jardines (zoológicos, botánicos)"
+      },
+      {
+        "code": "M-9",
+        "factor": 1.45,
+        "name": "Lienzos Charros"
+      },
+      {
+        "code": "M-10",
+        "factor": 1.3,
+        "name": "Palenques"
+      },
+      {
+        "code": "M-11",
+        "factor": 0.04,
+        "name": "Parques"
+      },
+      {
+        "code": "M-12",
+        "factor": 1.86,
+        "name": "Planetarios"
+      },
+      {
+        "code": "M-13",
+        "factor": 0.05,
+        "name": "Plazas Públicas"
+      },
+      {
+        "code": "M-14",
+        "factor": 1.41,
+        "name": "Plazas de Toros"
+      },
+      {
+        "code": "m-15.1",
+        "factor": 1.55,
+        "name": "Edificicios"
+      },
+      {
+        "code": "m-15.2",
+        "factor": 0.06,
+        "name": "Obra Exterior"
+      },
+      {
+        "code": "N-1",
+        "factor": 1.86,
+        "name": "Basílicas y Catedrales"
+      },
+      {
+        "code": "N-2",
+        "factor": 1.97,
+        "name": "Capillas"
+      },
+      {
+        "code": "N-3",
+        "factor": 1.3,
+        "name": "Casas Pastorales"
+      },
+      {
+        "code": "N-4",
+        "factor": 1.2,
+        "name": "Conventos y Monasterios"
+      },
+      {
+        "code": "N-5",
+        "factor": 1.76,
+        "name": "Iglesias"
+      },
+      {
+        "code": "N-6",
+        "factor": 1.55,
+        "name": "Sede Arzobispal"
+      },
+      {
+        "code": "O-1",
+        "factor": 1.14,
+        "name": "Centros de Rehabilitación Física"
+      },
+      {
+        "code": "O-2",
+        "factor": 1.08,
+        "name": "Centros de Salud"
+      },
+      {
+        "code": "O-3",
+        "factor": 1.07,
+        "name": "Clínicas"
+      },
+      {
+        "code": "O-4",
+        "factor": 1.08,
+        "name": "Consultorios"
+      },
+      {
+        "code": "O-5",
+        "factor": 1.04,
+        "name": "Dispensarios"
+      },
+      {
+        "code": "O-6",
+        "factor": 1.24,
+        "name": "Labarorios de Análisis Clínico"
+      },
+      {
+        "code": "O-7",
+        "factor": 1.24,
+        "name": "Laboratorios de Rayos X"
+      },
+      {
+        "code": "O-8",
+        "factor": 1.92,
+        "name": "Hospitales"
+      },
+      {
+        "code": "O-9",
+        "factor": 1.22,
+        "name": "Laboratorios Especializados"
+      },
+      {
+        "code": "O-10",
+        "factor": 1.04,
+        "name": "Unidades de Servicio Médico"
+      },
+      {
+        "code": "O-11",
+        "factor": 1.04,
+        "name": "Centros Antirábicos"
+      },
+      {
+        "code": "P-1",
+        "factor": 1.14,
+        "name": "Agencias de Viaje"
+      },
+      {
+        "code": "P-2",
+        "factor": 0,
+        "name": "Balnearios"
+      },
+      {
+        "code": "p-2.1",
+        "factor": 1.14,
+        "name": "Edificicios"
+      },
+      {
+        "code": "p-2.2",
+        "factor": 0.06,
+        "name": "Obra Exterior"
+      },
+      {
+        "code": "P-3",
+        "factor": 0.05,
+        "name": "Camping"
+      },
+      {
+        "code": "P-4",
+        "factor": 2.01,
+        "name": "Centros de Convenciones"
+      },
+      {
+        "code": "P-5",
+        "factor": 3.39,
+        "name": "Complejos Hoteleros"
+      },
+      {
+        "code": "P-6",
+        "factor": 0.06,
+        "name": "Complejos y Hoteles (Obra Ext.)"
+      },
+      {
+        "code": "P-7",
+        "factor": 2.82,
+        "name": "Hoteles de cinco estrellas"
+      },
+      {
+        "code": "P-8",
+        "factor": 1.94,
+        "name": "Hoteles de cuatro estrellas"
+      },
+      {
+        "code": "P-9",
+        "factor": 1.55,
+        "name": "Hoteles de tres estrellas o menos"
+      },
+      {
+        "code": "P-10",
+        "factor": 1.45,
+        "name": "Moteles"
+      },
+      {
+        "code": "P-11",
+        "factor": 0.06,
+        "name": "Trailer Park"
+      },
+      {
+        "code": "P-12",
+        "factor": 2.07,
+        "name": "SPA´s"
+      },
+      {
+        "code": "Q-1",
+        "factor": 1.86,
+        "name": "Bares y Cantinas"
+      },
+      {
+        "code": "Q-2",
+        "factor": 1.45,
+        "name": "Cafeterías"
+      },
+      {
+        "code": "Q-3",
+        "factor": 1.24,
+        "name": "Cocinas Rápidas"
+      },
+      {
+        "code": "Q-4",
+        "factor": 1.18,
+        "name": "Comedores"
+      },
+      {
+        "code": "Q-5",
+        "factor": 1.76,
+        "name": "Restaurantes"
+      },
+      {
+        "code": "R-1",
+        "factor": 1.33,
+        "name": "Baños Públicos"
+      },
+      {
+        "code": "R-2",
+        "factor": 1,
+        "name": "Estacionamientos Descubiertos"
+      },
+      {
+        "code": "R-3",
+        "factor": 1.16,
+        "name": "Estacionamientos Cubiertos"
+      },
+      {
+        "code": "R-4",
+        "factor": 1.33,
+        "name": "Gasolineras"
+      }
+    ],
+    "arch": [
+      {
+        "name": "I.1- DISEÑO CONCEPTUAL",
+        "pct": 11.0
+      },
+      {
+        "name": "I.2.-ANTEPROYECTO",
+        "pct": 20.0
+      },
+      {
+        "name": "I.3.- DISEÑO EJECUTIVO",
+        "pct": 35.0
+      },
+      {
+        "name": "I.4.- ESTRUCTURA",
+        "pct": 12.0
+      },
+      {
+        "name": "I.5.- INSTALACIÓN ELÉCTRICA",
+        "pct": 10.0
+      },
+      {
+        "name": "I.6.- INSTALACIÓN HIDROSANITARIA",
+        "pct": 8.0
+      },
+      {
+        "name": "I.7.- INSTALACIÓN DE GAS",
+        "pct": 4.0
+      }
+    ],
+    "archExtra": [
+      {
+        "name": "I.7.- INSTALACIÓN DE AIRE ACONDICIONADO",
+        "pct": 11.0
+      },
+      {
+        "name": "I.8.- INSTALACIÓN DE VOZ Y DATOS",
+        "pct": 5.0
+      },
+      {
+        "name": "I.9.- INSTALACIÓN DE TELEFONÍA Y SONIDO",
+        "pct": 5.0
+      },
+      {
+        "name": "I.10.- INSTALACIÓN DE GASES MEDICINALES",
+        "pct": 8.0
+      },
+      {
+        "name": "I.11.- INSTALACIÓN DE VAPOR Y CONDENSADOS",
+        "pct": 8.0
+      },
+      {
+        "name": "I.12.- INSTALACIÓN DE PARARRAYOS",
+        "pct": 3.0
+      },
+      {
+        "name": "I.13.- INSTALACIÓN CONTRA INCENDIO",
+        "pct": 8.0
+      }
+    ],
+    "urb": [
+      {
+        "name": "II.1.- VIABILIDAD",
+        "pct": 6.0
+      },
+      {
+        "name": "II.2.-DISEÑO CONCEPTUAL",
+        "pct": 10.0
+      },
+      {
+        "name": "II.3.-ANTEPROYECTO",
+        "pct": 22.0
+      },
+      {
+        "name": "II.4.- DISEÑO EJECUTIVO",
+        "pct": 34.0
+      },
+      {
+        "name": "II.5.- INGENIERÍA ELÉCTRICA",
+        "pct": 10.0
+      },
+      {
+        "name": "II.6.- INGENIERÍA DEL AGUA",
+        "pct": 18.0
+      }
+    ],
+    "urbExtra": [
+      {
+        "name": "II.a.- INSTALACIÓN DE TELEFONÍA SUBTERRANEA",
+        "pct": 10.0
+      },
+      {
+        "name": "II.b.- INSTALACIÓN SUBTERRÁNEA DE GAS",
+        "pct": 10.0
+      }
+    ]
+  }
+}
