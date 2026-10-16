@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // El repositorio de GitHub se llama chimi-chai.
     base: '/chimi-chai/',
 
     plugins: [react(), tailwindcss()],
